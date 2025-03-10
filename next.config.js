@@ -4,7 +4,9 @@
  */
 import "./src/env.js";
 
-/** @type {import("next").NextConfig} */
-const config = {};
+// Configuration for Next.js
+const config = {
+  output: 'standalone',
+};
 
 export default config;
