@@ -107,18 +107,33 @@ export default function HoursLocationPage() {
           While you&apos;re in the area, why not explore some other local attractions:
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded bg-white p-4 shadow-sm">
+          <a 
+            href="https://visitabingdonvirginia.com/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="rounded bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
+          >
             <h3 className="mb-1 font-semibold text-sepia-900">Historic Downtown</h3>
             <p className="text-sepia-700">Explore the charming historic district with shops and restaurants.</p>
-          </div>
-          <div className="rounded bg-white p-4 shadow-sm">
+          </a>
+          <a 
+            href="https://bartertheatre.com/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="rounded bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
+          >
             <h3 className="mb-1 font-semibold text-sepia-900">The Barter Theatre</h3>
             <p className="text-sepia-700">The state theatre of Virginia, offering year-round performances.</p>
-          </div>
-          <div className="rounded bg-white p-4 shadow-sm">
+          </a>
+          <a 
+            href="https://www.vacreepertrail.org/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="rounded bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
+          >
             <h3 className="mb-1 font-semibold text-sepia-900">Virginia Creeper Trail</h3>
             <p className="text-sepia-700">A scenic 34-mile multi-purpose trail for hiking and biking.</p>
-          </div>
+          </a>
         </div>
       </section>
     </div>
