@@ -7,7 +7,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # Install pnpm
-RUN corepack enable && corepack prepare pnpm@10.5.2 --activate
+RUN npm install -g pnpm@10.5.2
 
 # Copy package files
 COPY package.json pnpm-lock.yaml* ./
@@ -27,7 +27,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED 1
 
 # Build the application
-RUN corepack enable && corepack prepare pnpm@10.5.2 --activate
+RUN npm install -g pnpm@10.5.2
 RUN pnpm build
 
 # Production image, copy all the files and run next
@@ -40,7 +40,12 @@ ENV NEXT_TELEMETRY_DISABLED 1
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
+# Create images directory if it doesn't exist
+RUN mkdir -p /app/public/images
+RUN chown -R nextjs:nodejs /app/public
+
 COPY --from=builder /app/public ./public
+RUN chown -R nextjs:nodejs /app/public
 
 # Set the correct permission for prerender cache
 RUN mkdir .next

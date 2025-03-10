@@ -79,10 +79,44 @@ The website will be available at [http://localhost:8080](http://localhost:8080).
 For a simpler setup, you can use Docker Compose:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
-This will build the image and start the container in detached mode. The website will be available at [http://localhost:8080](http://localhost:8080).
+This will build the image and start the container in detached mode. The website will be available at [http://localhost:9000](http://localhost:9000).
+
+### Docker Compose Environments
+
+We provide multiple docker-compose files for different environments:
+
+1. **Default (docker-compose.yml)**:
+   ```bash
+   docker compose up -d
+   ```
+   Uses the pre-built image from Docker Hub.
+
+2. **Development (docker-compose.dev.yml)**:
+   ```bash
+   docker compose -f docker-compose.dev.yml up -d
+   ```
+   Builds from source, mounts volumes for live code changes, and runs in development mode.
+
+3. **Production (docker-compose.prod.yml)**:
+   ```bash
+   docker compose -f docker-compose.prod.yml up -d
+   ```
+   Uses the pre-built image with production optimizations like resource limits and improved logging.
+
+### Continuous Integration/Deployment
+
+This project uses GitHub Actions for CI/CD. Every push to the main branch automatically:
+1. Builds a new Docker image
+2. Pushes it to Docker Hub as `jaredy89/antiques-app:latest`
+
+To use this feature:
+1. Fork/clone this repository
+2. Add your Docker Hub credentials as GitHub secrets:
+   - `DOCKERHUB_USERNAME`
+   - `DOCKERHUB_TOKEN`
 
 ### Changing the Port
 

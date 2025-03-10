@@ -1,10 +1,6 @@
 services:
   app:
     image: jaredy89/antiques-app:latest
-    # Uncomment build section if you want to build locally instead of using the pre-built image
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
     ports:
       - "9000:3000"
     environment:
@@ -18,4 +14,18 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 10s 
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+        window: 120s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3" 
