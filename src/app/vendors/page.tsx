@@ -106,7 +106,7 @@ export default function VendorsPage() {
               We offer flexible booth spaces and competitive commission rates in a high-traffic location.
             </p>
             <p className="mb-4 text-sepia-800">
-              As a vendor, you'll benefit from:
+              As a vendor, you&apos;ll benefit from:
             </p>
             <ul className="mb-6 list-disc pl-5 text-sepia-800">
               <li>Prime location in historic Abingdon</li>
@@ -130,10 +130,10 @@ export default function VendorsPage() {
               <div>
                 <h4 className="font-medium text-sepia-900">Available Booth Sizes:</h4>
                 <ul className="list-disc pl-5 text-sepia-800">
-                  <li>Small: 6' x 8' ($175/month)</li>
-                  <li>Medium: 8' x 10' ($250/month)</li>
-                  <li>Large: 10' x 12' ($325/month)</li>
-                  <li>Premium: 12' x 15' ($450/month)</li>
+                  <li>Small: 6&apos; x 8&apos; ($175/month)</li>
+                  <li>Medium: 8&apos; x 10&apos; ($250/month)</li>
+                  <li>Large: 10&apos; x 12&apos; ($325/month)</li>
+                  <li>Premium: 12&apos; x 15&apos; ($450/month)</li>
                 </ul>
               </div>
               
@@ -164,8 +164,8 @@ export default function VendorsPage() {
           <div className="rounded-lg bg-white p-6 shadow-md">
             <blockquote className="border-l-4 border-antique-dark pl-4">
               <p className="italic text-sepia-800">
-                "I've been a vendor at Abingdon Antiques for five years now. The location is excellent, 
-                the staff is professional, and my sales have been consistently strong."
+                &quot;I&apos;ve been a vendor at Abingdon Antiques for five years now. The location is excellent, 
+                the staff is professional, and my sales have been consistently strong.&quot;
               </p>
             </blockquote>
             <p className="mt-4 font-medium text-sepia-900">— Mary Johnson, Heritage Silver</p>
@@ -174,9 +174,9 @@ export default function VendorsPage() {
           <div className="rounded-lg bg-white p-6 shadow-md">
             <blockquote className="border-l-4 border-antique-dark pl-4">
               <p className="italic text-sepia-800">
-                "As a new dealer, I was nervous about starting out, but the team at Abingdon Antiques 
+                &quot;As a new dealer, I was nervous about starting out, but the team at Abingdon Antiques 
                 was incredibly supportive. The mall gets great foot traffic and my booth has been profitable 
-                from the first month."
+                from the first month.&quot;
               </p>
             </blockquote>
             <p className="mt-4 font-medium text-sepia-900">— Robert Williams, Time Capsule Collectibles</p>

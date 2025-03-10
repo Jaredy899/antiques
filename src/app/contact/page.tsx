@@ -146,7 +146,7 @@ export default function ContactPage() {
           {formStatus.submitted ? (
             <div className="rounded-md bg-green-50 p-4 text-green-800">
               <p className="text-lg font-medium">{formStatus.info.msg}</p>
-              <p className="mt-2">We'll get back to you as soon as possible.</p>
+              <p className="mt-2">We&apos;ll get back to you as soon as possible.</p>
             </div>
           ) : (
             <form className="space-y-4" onSubmit={handleOnSubmit}>
@@ -233,7 +233,7 @@ export default function ContactPage() {
               Do you offer appraisals for antiques?
             </h3>
             <p className="text-sepia-800">
-              While we don't offer formal appraisals, our experienced vendors can provide informal assessments of items' 
+              While we don&apos;t offer formal appraisals, our experienced vendors can provide informal assessments of items&apos; 
               potential market value. For official appraisals, we recommend contacting a certified appraiser.
             </p>
           </div>

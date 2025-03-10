@@ -33,7 +33,7 @@ export default function HoursLocationPage() {
               We are closed on the following holidays:
             </p>
             <ul className="list-disc pl-5 text-sepia-800">
-              <li>New Year's Day</li>
+              <li>New Year&apos;s Day</li>
               <li>Easter Sunday</li>
               <li>Independence Day</li>
               <li>Thanksgiving Day</li>
@@ -105,7 +105,7 @@ export default function HoursLocationPage() {
       <section className="mt-12 rounded-lg bg-sepia-100 p-8">
         <h2 className="mb-6 text-2xl font-bold text-sepia-900">Nearby Attractions</h2>
         <p className="mb-4 text-sepia-800">
-          While you're in the area, why not explore some other local attractions:
+          While you&apos;re in the area, why not explore some other local attractions:
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div className="rounded bg-white p-4 shadow-sm">

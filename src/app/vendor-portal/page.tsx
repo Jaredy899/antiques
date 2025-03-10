@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
 // Define types
 type InventoryItem = {
@@ -50,7 +49,7 @@ export default function VendorPortalPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("dashboard");
   const [inventory, setInventory] = useState<InventoryItem[]>(sampleInventory);
-  const [sales, setSales] = useState<SaleItem[]>(sampleSales);
+  const [sales] = useState<SaleItem[]>(sampleSales);
   
   // Form state for adding new inventory
   const [newItem, setNewItem] = useState({
@@ -70,9 +69,9 @@ export default function VendorPortalPage() {
     
     // Get vendor data from localStorage (in a real app, this would be from an API)
     setVendorData({
-      name: localStorage.getItem("vendorName") || "",
-      email: localStorage.getItem("vendorEmail") || "",
-      boothNumber: localStorage.getItem("vendorBoothNumber") || "",
+      name: localStorage.getItem("vendorName") ?? "",
+      email: localStorage.getItem("vendorEmail") ?? "",
+      boothNumber: localStorage.getItem("vendorBoothNumber") ?? "",
     });
     
     setIsLoading(false);
@@ -88,15 +87,13 @@ export default function VendorPortalPage() {
 
   const handleAddItem = (e: React.FormEvent) => {
     e.preventDefault();
-    // Make sure we have a default date if none is provided
-    const itemDate = newItem.date || new Date().toISOString().split('T')[0];
     
     const newItemObj: InventoryItem = {
       id: Math.max(0, ...inventory.map(item => item.id)) + 1,
       name: newItem.name,
       category: newItem.category,
       price: parseFloat(newItem.price),
-      date: itemDate as string,
+      date: (newItem.date || new Date().toISOString().split('T')[0]) as string,
     };
     
     setInventory([newItemObj, ...inventory]);

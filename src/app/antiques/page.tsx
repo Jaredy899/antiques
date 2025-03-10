@@ -119,7 +119,7 @@ export default function AntiquesPage() {
       <div className="mt-16 rounded-lg bg-sepia-100 p-8 text-center">
         <h2 className="mb-4 text-2xl font-bold text-sepia-900">Looking for Something Special?</h2>
         <p className="mb-5 text-sepia-800">
-          Our inventory changes weekly. If you're looking for a specific item, please contact us or visit our store.
+          Our inventory changes weekly. If you&apos;re looking for a specific item, please contact us or visit our store.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a 

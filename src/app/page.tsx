@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import CategoryImage from "~/components/CategoryImage";
 import HeroImage from "~/components/HeroImage";
 
@@ -96,14 +97,16 @@ export default function HomePage() {
               </a>
             </p>
             <p className="text-sepia-800">
-              We're expanding to serve you better! Stay tuned for our grand opening announcement.
+              We&apos;re expanding to serve you better! Stay tuned for our grand opening announcement.
             </p>
           </div>
           <div className="rounded-lg bg-white p-2 shadow-md">
-            <img 
+            <Image 
               src="/images/new-location.jpg" 
               alt="Our new location at 227 W Main St" 
-              className="rounded h-auto w-full object-cover"
+              className="rounded object-cover"
+              width={500}
+              height={300}
             />
           </div>
         </div>
@@ -141,11 +144,11 @@ export default function HomePage() {
               Our vendor mall hosts dozens of skilled dealers, each bringing their unique expertise and inventory.
             </p>
             <p className="mb-4 text-sepia-800">
-              Whether you're looking for fine furniture, vintage clothing, rare collectibles, or unique home decor, 
-              you'll find something special at Abingdon Antiques.
+              Whether you&apos;re looking for fine furniture, vintage clothing, rare collectibles, or unique home decor, 
+              you&apos;ll find something special at Abingdon Antiques.
             </p>
             <p className="text-sepia-800">
-              Visit us today and discover why we're the region's premier destination for antiques and collectibles.
+              Visit us today and discover why we&apos;re the region&apos;s premier destination for antiques and collectibles.
             </p>
           </div>
           <div className="flex flex-col gap-4">

@@ -102,7 +102,7 @@ export default function VendorLoginPage() {
         
         <div className="mt-6 border-t border-sepia-100 pt-6 text-center">
           <p className="text-sm text-sepia-700">
-            Don't have a vendor account?{" "}
+            Don&apos;t have a vendor account?{" "}
             <Link href="/contact" className="text-antique-dark hover:underline">
               Contact us to become a vendor
             </Link>
