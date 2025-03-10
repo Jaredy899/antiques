@@ -60,7 +60,7 @@ This project can be run in a Docker container for easier deployment and consiste
 
 ### Building and Running with Docker
 
-1. Build the Docker image:
+1. Build the Docker image locally (only needed for testing):
 
 ```bash
 docker build -t abingdon-antiques .
@@ -72,39 +72,17 @@ docker build -t abingdon-antiques .
 docker run -p 9000:3000 abingdon-antiques
 ```
 
-The website will be available at [http://localhost:8080](http://localhost:8080).
+The website will be available at [http://localhost:9000](http://localhost:9000).
 
 ### Using Docker Compose
 
-For a simpler setup, you can use Docker Compose:
+For deployment, you can use Docker Compose with our pre-built image:
 
 ```bash
 docker compose up -d
 ```
 
-This will build the image and start the container in detached mode. The website will be available at [http://localhost:9000](http://localhost:9000).
-
-### Docker Compose Environments
-
-We provide multiple docker-compose files for different environments:
-
-1. **Default (docker-compose.yml)**:
-   ```bash
-   docker compose up -d
-   ```
-   Uses the pre-built image from Docker Hub.
-
-2. **Development (docker-compose.dev.yml)**:
-   ```bash
-   docker compose -f docker-compose.dev.yml up -d
-   ```
-   Builds from source, mounts volumes for live code changes, and runs in development mode.
-
-3. **Production (docker-compose.prod.yml)**:
-   ```bash
-   docker compose -f docker-compose.prod.yml up -d
-   ```
-   Uses the pre-built image with production optimizations like resource limits and improved logging.
+This will start the container in detached mode. The website will be available at [http://localhost:9000](http://localhost:9000).
 
 ### Continuous Integration/Deployment
 
@@ -118,24 +96,29 @@ To use this feature:
    - `DOCKERHUB_USERNAME`
    - `DOCKERHUB_TOKEN`
 
+### Deploying Updates
+
+To deploy updates after pushing changes to GitHub:
+
+```bash
+# Pull the latest image
+docker compose pull
+
+# Restart the container with the new image
+docker compose up -d
+```
+
 ### Changing the Port
 
-If you want to use a different port:
-
-1. For Docker run command, change the port mapping:
-   ```bash
-   docker run -p YOUR_PORT:3000 abingdon-antiques
-   ```
-
-2. For Docker Compose, edit the `docker-compose.yml` file and change the port mapping:
-   ```yaml
-   ports:
-     - "YOUR_PORT:3000"
-   ```
+If you want to use a different port, edit the `compose.yaml` file and change the port mapping:
+```yaml
+ports:
+  - "YOUR_PORT:3000"
+```
 
 ### Environment Variables
 
-If your application requires environment variables, create a `.env.production` file and uncomment the `env_file` section in the `docker-compose.yml` file.
+If your application requires environment variables, create a `.env.production` file and uncomment the `env_file` section in the `compose.yaml` file.
 
 ### Production Deployment
 
