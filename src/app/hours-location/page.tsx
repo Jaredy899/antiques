@@ -1,7 +1,6 @@
-export const metadata = {
-  title: "Hours & Location | Abingdon Antiques",
-  description: "Visit Abingdon Antiques and More Vendor Mall. Find our store hours and location map.",
-};
+'use client';
+
+import AddressLink from '~/components/AddressLink';
 
 export default function HoursLocationPage() {
   return (
@@ -52,10 +51,10 @@ export default function HoursLocationPage() {
           <div className="mb-6">
             <h3 className="mb-2 font-medium text-sepia-900">Address:</h3>
             <address className="text-sepia-800 not-italic">
-              <a href="https://maps.google.com/?q=961+West+Main+Street,+Abingdon,+VA+24210" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              <AddressLink address="961 West Main Street, Abingdon, VA 24210">
                 961 West Main Street<br />
                 Abingdon, VA 24210
-              </a>
+              </AddressLink>
             </address>
           </div>
           

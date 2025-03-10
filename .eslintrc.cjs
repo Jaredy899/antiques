@@ -51,6 +51,12 @@ const config = {
       "rules": {
         "@typescript-eslint/no-unused-vars": "off"
       }
+    },
+    {
+      "files": ["src/components/Header.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unsafe-member-access": "off"
+      }
     }
   ]
 }

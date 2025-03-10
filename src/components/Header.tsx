@@ -1,7 +1,33 @@
+"use client";
+
 import Link from "next/link";
 import LogoHeader from "./LogoHeader";
+import { useState, useEffect } from "react";
+import { isBrowser } from "~/utils/browserChecks";
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Safely handle any window.ethereum-related errors
+  useEffect(() => {
+    if (isBrowser() && window.ethereum) {
+      // Make sure selectedAddress property exists
+      try {
+        // Safely check and set the property using type assertions
+        const ethereum = window.ethereum as { selectedAddress?: unknown };
+        if (ethereum.selectedAddress === undefined) {
+          ethereum.selectedAddress = null;
+        }
+      } catch (_error) {
+        console.log("Note: Could not access window.ethereum properties.");
+      }
+    }
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header className="w-full">
       <div className="mx-auto max-w-6xl px-4 py-6">
@@ -11,8 +37,20 @@ const Header = () => {
         </div>
 
         {/* Navigation */}
-        <nav className="flex justify-center border-t border-b border-sepia-300 py-4">
-          <ul className="flex space-x-8 text-lg font-medium">
+        <nav className="border-t border-b border-sepia-300 py-4">
+          {/* Mobile Menu Button */}
+          <div className="flex justify-center md:hidden">
+            <button 
+              onClick={toggleMobileMenu}
+              className="text-sepia-800 hover:text-antique-dark focus:outline-none"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              <span className="block text-lg font-medium">Menu {isMobileMenuOpen ? '▲' : '▼'}</span>
+            </button>
+          </div>
+
+          {/* Desktop Navigation */}
+          <ul className="hidden md:flex md:justify-center md:space-x-8 text-lg font-medium">
             <li>
               <Link href="/" className="hover:text-antique-dark transition-colors">
                 Home
@@ -39,6 +77,37 @@ const Header = () => {
               </Link>
             </li>
           </ul>
+
+          {/* Mobile Navigation */}
+          {isMobileMenuOpen && (
+            <ul className="mt-4 flex flex-col items-center space-y-4 text-lg font-medium md:hidden">
+              <li>
+                <Link href="/" className="hover:text-antique-dark transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/antiques" className="hover:text-antique-dark transition-colors">
+                  Antiques
+                </Link>
+              </li>
+              <li>
+                <Link href="/vendors" className="hover:text-antique-dark transition-colors">
+                  Vendors
+                </Link>
+              </li>
+              <li>
+                <Link href="/hours-location" className="hover:text-antique-dark transition-colors">
+                  Hours & Location
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-antique-dark transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          )}
         </nav>
       </div>
     </header>

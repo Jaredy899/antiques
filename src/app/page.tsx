@@ -1,7 +1,10 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
 import CategoryImage from "~/components/CategoryImage";
 import HeroImage from "~/components/HeroImage";
+import AddressLink from "~/components/AddressLink";
 
 export default function HomePage() {
   return (
@@ -87,14 +90,9 @@ export default function HomePage() {
             </h2>
             <p className="mb-6 text-lg text-sepia-800">
               <span className="font-semibold">Our new location will be opening soon at:</span><br />
-              <a 
-                href="https://maps.google.com/?q=227+W+Main+St,+Abingdon,+VA+24210" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="hover:underline"
-              >
+              <AddressLink address="227 W Main St, Abingdon, VA 24210">
                 227 W Main St, Abingdon, VA 24210
-              </a>
+              </AddressLink>
             </p>
             <p className="text-sepia-800">
               We&apos;re expanding to serve you better! Stay tuned for our grand opening announcement.

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AddressLink from "./AddressLink";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,7 +13,11 @@ const Footer = () => {
             <h3 className="mb-3 text-lg font-semibold text-sepia-900">Contact Us</h3>
             <p className="mb-2">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
             <p className="mb-2">Email: <a href="mailto:info@abingdonantiquesandmore.com" className="hover:underline">info@abingdonantiquesandmore.com</a></p>
-            <p><a href="https://maps.google.com/?q=961+West+Main+Street,+Abingdon,+VA+24210" target="_blank" rel="noopener noreferrer" className="hover:underline">961 West Main Street, Abingdon, VA 24210</a></p>
+            <p>
+              <AddressLink address="961 West Main Street, Abingdon, VA 24210">
+                961 West Main Street, Abingdon, VA 24210
+              </AddressLink>
+            </p>
             <div className="mt-4">
               <h4 className="mb-2 font-medium text-sepia-900">Follow Us:</h4>
               <div className="flex space-x-4">
