@@ -43,12 +43,14 @@ export default function VendorsPage() {
       {/* Vendor Login Banner */}
       <div className="mb-12 rounded-lg bg-antique-dark p-6 text-center text-white shadow-md">
         <h2 className="mb-3 text-2xl font-bold">Vendor Portal</h2>
-        <p className="mb-4">Current vendors can access their accounts to manage inventory, track sales, and update settings.</p>
+        <p className="mb-4">Current vendors can access their accounts through Quail HQ to manage inventory, track sales, and update settings.</p>
         <a 
-          href="/vendor-login" 
+          href="https://vendor.quailhq.com" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block rounded-md bg-white px-6 py-3 font-medium text-sepia-900 shadow-sm transition-all hover:bg-sepia-50"
         >
-          Vendor Login
+          Access Vendor Portal
         </a>
       </div>
       
