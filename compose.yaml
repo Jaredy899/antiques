@@ -1,0 +1,12 @@
+services:
+  app:
+    image: jaredy89/antiques-app:latest
+    container_name: antiques-app
+    ports:
+      - "9000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    # Add any environment variables your app needs
+    # env_file:
+    #   - .env.production 
