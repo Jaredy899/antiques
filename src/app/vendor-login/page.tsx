@@ -1,11 +1,8 @@
 'use client';
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 
 export default function VendorLoginPage() {
-  const router = useRouter();
-
   useEffect(() => {
     // Redirect to Quail HQ for vendor management
     window.location.href = "https://vendor.quailhq.com";

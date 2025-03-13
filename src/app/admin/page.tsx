@@ -5,6 +5,16 @@ import { UploadDropzone } from '@uploadthing/react';
 import { useUser, SignIn, useClerk } from "@clerk/nextjs";
 import type { OurFileRouter } from '../api/uploadthing/core';
 import Link from 'next/link';
+import Image from 'next/image';
+
+// Define response types
+type ImagesResponse = {
+  images: string[];
+};
+
+type VendorsResponse = {
+  vendors: Vendor[];
+};
 
 // Define vendor type
 type Vendor = {
@@ -23,7 +33,6 @@ export default function AdminPage() {
   const clerk = useClerk();
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('images');
-  const [selectedVendor, setSelectedVendor] = useState<number | null>(null);
   const [isSaving, setIsSaving] = useState(false);
 
   // Load images from API
@@ -31,8 +40,8 @@ export default function AdminPage() {
     async function loadImages() {
       try {
         const response = await fetch('/api/images');
-        const data = await response.json();
-        setUploadedImages(data.images);
+        const data = await response.json() as ImagesResponse;
+        setUploadedImages(data.images || []);
       } catch (error) {
         console.error('Error loading images:', error);
         setUploadedImages([]);
@@ -42,7 +51,7 @@ export default function AdminPage() {
     }
 
     if (isLoaded) {
-      loadImages();
+      void loadImages();
     }
   }, [isLoaded]);
 
@@ -51,7 +60,7 @@ export default function AdminPage() {
     async function loadVendors() {
       try {
         const response = await fetch('/api/vendors');
-        const data = await response.json();
+        const data = await response.json() as VendorsResponse;
         setVendors(data.vendors || []);
       } catch (error) {
         console.error('Error loading vendors:', error);
@@ -59,7 +68,7 @@ export default function AdminPage() {
     }
 
     if (isLoaded && isSignedIn) {
-      loadVendors();
+      void loadVendors();
     }
   }, [isLoaded, isSignedIn]);
 
@@ -80,7 +89,7 @@ export default function AdminPage() {
     }
 
     if (isLoaded && !isLoading && isSignedIn) {
-      saveImages();
+      void saveImages();
     }
   }, [uploadedImages, isLoaded, isLoading, isSignedIn]);
 
@@ -98,7 +107,7 @@ export default function AdminPage() {
         body: JSON.stringify({ vendorId, boothImage: imageUrl }),
       });
       
-      const data = await response.json();
+      const data = await response.json() as { success: boolean; vendor?: Vendor };
       
       if (data.success) {
         // Update local vendors state
@@ -107,7 +116,6 @@ export default function AdminPage() {
             ? { ...vendor, boothImage: imageUrl } 
             : vendor
         ));
-        setSelectedVendor(null);
       }
     } catch (error) {
       console.error('Error updating vendor booth image:', error);
@@ -145,7 +153,7 @@ export default function AdminPage() {
           {user && (
             <div className="flex items-center">
               <span className="text-sm text-sepia-600 mr-2">
-                Welcome, {user.firstName || user.emailAddresses[0]?.emailAddress}
+                Welcome, {user.firstName ?? user.emailAddresses[0]?.emailAddress}
               </span>
             </div>
           )}
@@ -196,10 +204,12 @@ export default function AdminPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8">
             {uploadedImages.map((imageUrl, index) => (
               <div key={index} className="group relative aspect-square overflow-hidden rounded-lg bg-sepia-100">
-                <img
+                <Image
                   src={imageUrl}
                   alt={`Antique item ${index + 1}`}
                   className="h-full w-full object-cover"
+                  width={400}
+                  height={400}
                 />
                 <button
                   onClick={() => {
@@ -263,15 +273,16 @@ export default function AdminPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8">
             {vendors.filter(vendor => vendor.boothImage).map((vendor) => (
               <div key={vendor.id} className="group relative aspect-square overflow-hidden rounded-lg bg-sepia-100">
-                <img
-                  src={vendor.boothImage}
+                <Image
+                  src={vendor.boothImage ?? ''}
                   alt={`Booth image ${vendor.id}`}
                   className="h-full w-full object-cover"
+                  width={400}
+                  height={400}
                 />
                 <button
                   onClick={() => {
-                    // Update vendor to remove booth image
-                    updateVendorBoothImage(vendor.id, "");
+                    void updateVendorBoothImage(vendor.id, "");
                   }}
                   className="absolute right-2 top-2 rounded-full bg-red-500 p-2 text-white opacity-0 transition-opacity group-hover:opacity-100"
                 >
@@ -282,122 +293,8 @@ export default function AdminPage() {
               </div>
             ))}
           </div>
-
-          {vendors.filter(vendor => vendor.boothImage).length === 0 && (
-            <p className="text-center text-sepia-700 mb-8">
-              No booth images uploaded yet. Use the upload area below to add booth images.
-            </p>
-          )}
-
-          {/* Upload Section */}
-          <div className="mt-8 border-t pt-8">
-            <div className="max-w-md mx-auto">
-              <UploadDropzone<OurFileRouter, "imageUploader">
-                endpoint="imageUploader"
-                onClientUploadComplete={(res) => {
-                  if (res && res.length > 0 && res[0]?.url) {
-                    // Find first vendor without an image
-                    const vendorWithoutImage = vendors.find(v => !v.boothImage);
-                    if (vendorWithoutImage) {
-                      updateVendorBoothImage(vendorWithoutImage.id, res[0].url);
-                    }
-                  }
-                }}
-                onUploadError={(error: Error) => {
-                  alert(`ERROR! ${error.message}`);
-                }}
-                config={{ mode: "auto" }}
-                appearance={{
-                  button: {
-                    backgroundColor: "#78716c",
-                    color: "white",
-                    padding: "4px 8px",
-                    fontSize: "14px",
-                    borderRadius: "4px"
-                  },
-                  container: "w-full",
-                  allowedContent: "hidden",
-                  uploadIcon: "hidden"
-                }}
-              />
-              
-              {isSaving && (
-                <div className="mt-4 flex items-center justify-center text-sepia-700">
-                  <div className="h-4 w-4 mr-2 animate-spin rounded-full border-2 border-sepia-300 border-t-sepia-800"></div>
-                  <span>Saving...</span>
-                </div>
-              )}
-            </div>
-          </div>
         </div>
       )}
-
-      {/* Analytics Tab */}
-      {activeTab === 'analytics' && (
-        <div>
-          <h2 className="text-xl font-semibold mb-4">Analytics</h2>
-          <div className="bg-white rounded-lg shadow p-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-sepia-50 p-4 rounded-lg border border-sepia-200">
-                <h3 className="text-sm font-medium text-sepia-600">Total Visitors</h3>
-                <p className="text-2xl font-bold text-sepia-900">1,234</p>
-                <p className="text-xs text-sepia-500">+12% from last month</p>
-              </div>
-              
-              <div className="bg-sepia-50 p-4 rounded-lg border border-sepia-200">
-                <h3 className="text-sm font-medium text-sepia-600">Page Views</h3>
-                <p className="text-2xl font-bold text-sepia-900">5,678</p>
-                <p className="text-xs text-sepia-500">+8% from last month</p>
-              </div>
-              
-              <div className="bg-sepia-50 p-4 rounded-lg border border-sepia-200">
-                <h3 className="text-sm font-medium text-sepia-600">Avg. Time on Site</h3>
-                <p className="text-2xl font-bold text-sepia-900">2:45</p>
-                <p className="text-xs text-sepia-500">+5% from last month</p>
-              </div>
-            </div>
-            
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-sepia-600 mb-2">Traffic Sources</h3>
-              <div className="h-40 bg-sepia-50 rounded-lg border border-sepia-200 flex items-center justify-center">
-                <p className="text-sepia-400">Analytics chart would appear here</p>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-sm font-medium text-sepia-600 mb-2">Popular Pages</h3>
-              <div className="bg-sepia-50 rounded-lg border border-sepia-200">
-                <div className="p-3 border-b border-sepia-200 flex justify-between">
-                  <span className="text-sm text-sepia-700">/antiques</span>
-                  <span className="text-sm font-medium text-sepia-900">3,456 views</span>
-                </div>
-                <div className="p-3 border-b border-sepia-200 flex justify-between">
-                  <span className="text-sm text-sepia-700">/</span>
-                  <span className="text-sm font-medium text-sepia-900">1,234 views</span>
-                </div>
-                <div className="p-3 flex justify-between">
-                  <span className="text-sm text-sepia-700">/contact</span>
-                  <span className="text-sm font-medium text-sepia-900">567 views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Logout Button at Bottom */}
-      <div className="mt-16 pt-8 border-t flex justify-center">
-        <button
-          onClick={() => clerk.signOut()}
-          className="flex items-center px-6 py-3 bg-sepia-800 text-white rounded-md hover:bg-sepia-900 transition-colors shadow-md"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V7.414l-5-5H3zm7 5a1 1 0 10-2 0v4a1 1 0 102 0V8zm-2 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
-            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" />
-          </svg>
-          Logout from Admin
-        </button>
-      </div>
     </div>
   );
-} 
+}

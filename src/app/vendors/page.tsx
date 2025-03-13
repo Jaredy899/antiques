@@ -1,6 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+
+// Define response type
+type VendorsResponse = {
+  vendors: Vendor[];
+};
 
 // Define vendor type
 type Vendor = {
@@ -22,7 +28,7 @@ export default function VendorsPage() {
     async function fetchVendors() {
       try {
         const response = await fetch('/api/vendors');
-        const data = await response.json();
+        const data = await response.json() as VendorsResponse;
         setVendors(data.vendors || []);
       } catch (error) {
         console.error('Error fetching vendors:', error);
@@ -31,7 +37,7 @@ export default function VendorsPage() {
       }
     }
 
-    fetchVendors();
+    void fetchVendors();
   }, []);
 
   // Close lightbox when escape key is pressed
@@ -95,12 +101,14 @@ export default function VendorsPage() {
             <div 
               key={vendor.id} 
               className="group aspect-square overflow-hidden rounded-lg bg-sepia-100 cursor-pointer"
-              onClick={() => setSelectedBooth(vendor.boothImage || null)}
+              onClick={() => setSelectedBooth(vendor.boothImage ?? null)}
             >
-              <img
-                src={vendor.boothImage}
+              <Image
+                src={vendor.boothImage ?? ''}
                 alt={`Vendor booth ${index + 1}`}
                 className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+                width={400}
+                height={400}
               />
             </div>
           ))}
@@ -208,10 +216,12 @@ export default function VendorsPage() {
           onClick={() => setSelectedBooth(null)}
         >
           <div className="relative max-h-[90vh] max-w-[90vw]">
-            <img 
+            <Image 
               src={selectedBooth} 
               alt="Enlarged booth view" 
               className="max-h-[90vh] max-w-[90vw] object-contain"
+              width={1200}
+              height={800}
             />
             <button 
               className="absolute top-2 right-2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70"

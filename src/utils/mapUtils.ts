@@ -24,6 +24,7 @@ export const openMaps = (address: string): void => {
     try {
       window.location.href = nativeMapsUrl;
     } catch (_error) {
+      // Error is caught but not used
       window.open(googleMapsUrl, '_blank');
     }
   } else {

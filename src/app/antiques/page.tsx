@@ -1,6 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+
+// Define response type
+type ImagesResponse = {
+  images: string[];
+};
 
 export default function AntiquesPage() {
   const [uploadedImages, setUploadedImages] = useState<string[]>([]);
@@ -12,8 +18,8 @@ export default function AntiquesPage() {
     async function loadImages() {
       try {
         const response = await fetch('/api/images');
-        const data = await response.json();
-        setUploadedImages(data.images);
+        const data = await response.json() as ImagesResponse;
+        setUploadedImages(data.images || []);
       } catch (error) {
         console.error('Error loading images:', error);
         setUploadedImages([]);
@@ -22,7 +28,7 @@ export default function AntiquesPage() {
       }
     }
 
-    loadImages();
+    void loadImages();
   }, []);
 
   // Close lightbox when escape key is pressed
@@ -64,10 +70,12 @@ export default function AntiquesPage() {
             className="group aspect-square overflow-hidden rounded-lg bg-sepia-100 cursor-pointer"
             onClick={() => setSelectedImage(imageUrl)}
           >
-            <img
+            <Image
               src={imageUrl}
               alt={`Gallery image ${index + 1}`}
               className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+              width={400}
+              height={400}
             />
           </div>
         ))}
@@ -86,10 +94,12 @@ export default function AntiquesPage() {
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative max-h-[90vh] max-w-[90vw]">
-            <img 
+            <Image 
               src={selectedImage} 
               alt="Enlarged view" 
               className="max-h-[90vh] max-w-[90vw] object-contain"
+              width={1200}
+              height={800}
             />
             <button 
               className="absolute top-2 right-2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70"

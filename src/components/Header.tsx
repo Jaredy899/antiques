@@ -19,6 +19,7 @@ const Header = () => {
           ethereum.selectedAddress = null;
         }
       } catch (_error) {
+        // Error is caught but not used
         console.log("Note: Could not access window.ethereum properties.");
       }
     }

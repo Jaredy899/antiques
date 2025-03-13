@@ -5,8 +5,22 @@ import path from "path";
 
 const dataFile = path.join(process.cwd(), "data", "vendors.json");
 
+// Define types
+type Vendor = {
+  id: number;
+  name: string;
+  specialty: string;
+  description: string;
+  boothNumber: string;
+  boothImage?: string;
+};
+
+type VendorsData = {
+  vendors: Vendor[];
+};
+
 // Ensure the data directory exists
-async function ensureDataDir() {
+async function ensureDataDir(): Promise<void> {
   const dir = path.join(process.cwd(), "data");
   try {
     await fs.access(dir);
@@ -16,11 +30,11 @@ async function ensureDataDir() {
 }
 
 // Read the current vendors data
-async function readVendorsData(): Promise<Record<string, any>> {
+async function readVendorsData(): Promise<VendorsData> {
   try {
     await ensureDataDir();
     const data = await fs.readFile(dataFile, "utf-8");
-    return JSON.parse(data);
+    return JSON.parse(data) as VendorsData;
   } catch {
     return {
       vendors: [
@@ -62,19 +76,19 @@ async function readVendorsData(): Promise<Record<string, any>> {
 }
 
 // Write vendors data
-async function writeVendorsData(data: Record<string, any>) {
+async function writeVendorsData(data: VendorsData): Promise<void> {
   await ensureDataDir();
   await fs.writeFile(dataFile, JSON.stringify(data, null, 2));
 }
 
 // GET endpoint to retrieve all vendors
-export async function GET() {
+export async function GET(): Promise<NextResponse> {
   const data = await readVendorsData();
   return NextResponse.json(data);
 }
 
 // POST endpoint to update a vendor's booth image
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<NextResponse> {
   const session = await auth();
   
   // Only allow authenticated users to modify vendor data
@@ -82,23 +96,25 @@ export async function POST(req: Request) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
-  const { vendorId, boothImage } = await req.json();
+  const body = await req.json() as { vendorId: number; boothImage: string };
+  const { vendorId, boothImage } = body;
   
-  if (!vendorId || !boothImage) {
+  if (!vendorId || boothImage === undefined) {
     return NextResponse.json({ error: "Vendor ID and booth image are required" }, { status: 400 });
   }
 
   const data = await readVendorsData();
   
   // Find the vendor and update their booth image
-  const vendorIndex = data.vendors.findIndex((v: any) => v.id === vendorId);
+  const vendorIndex = data.vendors.findIndex((v: Vendor) => v.id === vendorId);
   
   if (vendorIndex === -1) {
     return NextResponse.json({ error: "Vendor not found" }, { status: 404 });
   }
   
-  data.vendors[vendorIndex].boothImage = boothImage;
+  // Use non-null assertion since we've already checked vendorIndex !== -1
+  data.vendors[vendorIndex]!.boothImage = boothImage;
   await writeVendorsData(data);
 
-  return NextResponse.json({ success: true, vendor: data.vendors[vendorIndex] });
+  return NextResponse.json({ success: true, vendor: data.vendors[vendorIndex]! });
 } 
