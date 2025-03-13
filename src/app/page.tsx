@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
             <h1 className="mb-4 text-4xl font-bold text-sepia-900 md:text-5xl">
-              Welcome to Abingdon Antiques
+              Welcome to Abingdon Antiques and More
             </h1>
             <p className="mb-6 text-lg text-sepia-800">
               Discover unique treasures from the past at Abingdon Antiques and More Vendor Mall. 

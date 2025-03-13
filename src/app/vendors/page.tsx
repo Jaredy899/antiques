@@ -1,40 +1,66 @@
-export const metadata = {
-  title: "Our Vendors | Abingdon Antiques",
-  description: "Meet the vendors at Abingdon Antiques and More Vendor Mall. Learn about vendor opportunities.",
+'use client';
+
+import { useState, useEffect } from 'react';
+
+// Define vendor type
+type Vendor = {
+  id: number;
+  name: string;
+  specialty: string;
+  description: string;
+  boothNumber: string;
+  boothImage?: string;
 };
 
 export default function VendorsPage() {
-  // Sample vendor data (in a real app, this would come from a database or CMS)
-  const featuredVendors = [
-    {
-      id: 1,
-      name: "Vintage Treasures",
-      specialty: "Mid-century furniture and decor",
-      description: "Specializing in authentic mid-century modern pieces from the 1950s-1970s, including furniture, lighting, and decorative objects.",
-      boothNumber: "A12",
-    },
-    {
-      id: 2,
-      name: "Southern Heritage",
-      specialty: "Americana and folk art",
-      description: "Offering authentic Americana, folk art, primitives, and handcrafted items with a focus on Southern heritage and traditions.",
-      boothNumber: "B23",
-    },
-    {
-      id: 3,
-      name: "Time Capsule Collectibles",
-      specialty: "Vintage toys and advertising",
-      description: "Nostalgic collection of vintage toys, advertising signs, and memorabilia from the 1920s through the 1980s.",
-      boothNumber: "C08",
-    },
-    {
-      id: 4,
-      name: "Heritage Silver",
-      specialty: "Fine silver and estate jewelry",
-      description: "Curated collection of sterling silver, silverplate, and fine estate jewelry from various periods.",
-      boothNumber: "D15",
-    },
-  ];
+  const [vendors, setVendors] = useState<Vendor[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [selectedBooth, setSelectedBooth] = useState<string | null>(null);
+
+  // Fetch vendors data from API
+  useEffect(() => {
+    async function fetchVendors() {
+      try {
+        const response = await fetch('/api/vendors');
+        const data = await response.json();
+        setVendors(data.vendors || []);
+      } catch (error) {
+        console.error('Error fetching vendors:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchVendors();
+  }, []);
+
+  // Close lightbox when escape key is pressed
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedBooth(null);
+      }
+    };
+    
+    window.addEventListener('keydown', handleEsc);
+    
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="mx-auto max-w-6xl px-4 py-12">
+        <div className="flex items-center justify-center">
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-sepia-300 border-t-sepia-800"></div>
+        </div>
+      </div>
+    );
+  }
+
+  // Filter vendors with booth images
+  const vendorsWithBoothImages = vendors.filter(vendor => vendor.boothImage);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
@@ -60,42 +86,31 @@ export default function VendorsPage() {
         to create a diverse shopping experience.
       </p>
       
-      {/* Featured Vendors */}
+      {/* Booth Image Gallery */}
       <section className="mb-16">
-        <h2 className="mb-8 text-2xl font-bold text-sepia-900">Featured Vendors</h2>
+        <h2 className="mb-8 text-2xl font-bold text-sepia-900">Vendor Booth Gallery</h2>
         
-        <div className="grid gap-6 md:grid-cols-2">
-          {featuredVendors.map((vendor) => (
-            <div key={vendor.id} className="rounded-lg bg-white p-6 shadow-md">
-              <div className="mb-4 flex items-start justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-sepia-900">{vendor.name}</h3>
-                  <p className="mt-1 text-antique-dark">{vendor.specialty}</p>
-                </div>
-                <span className="rounded-full bg-sepia-100 px-3 py-1 text-sm text-sepia-800">
-                  Booth #{vendor.boothNumber}
-                </span>
-              </div>
-              <p className="text-sepia-800">{vendor.description}</p>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {vendorsWithBoothImages.map((vendor, index) => (
+            <div 
+              key={vendor.id} 
+              className="group aspect-square overflow-hidden rounded-lg bg-sepia-100 cursor-pointer"
+              onClick={() => setSelectedBooth(vendor.boothImage || null)}
+            >
+              <img
+                src={vendor.boothImage}
+                alt={`Vendor booth ${index + 1}`}
+                className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+              />
             </div>
           ))}
         </div>
-      </section>
-      
-      {/* Vendor Map */}
-      <section className="mb-16 rounded-lg bg-white p-6 shadow-md">
-        <h2 className="mb-6 text-2xl font-bold text-sepia-900">Vendor Mall Layout</h2>
-        
-        <div className="aspect-video w-full rounded bg-sepia-100">
-          <div className="flex h-full items-center justify-center text-center text-sepia-700">
-            <div>
-              <p className="text-lg font-medium">Vendor Mall Layout Map</p>
-              <p className="mt-2">
-                In a real implementation, this would be an interactive map showing vendor booth locations.
-              </p>
-            </div>
-          </div>
-        </div>
+
+        {vendorsWithBoothImages.length === 0 && (
+          <p className="text-center text-sepia-700">
+            No booth images available yet. Check back soon!
+          </p>
+        )}
       </section>
       
       {/* Become a Vendor */}
@@ -185,6 +200,33 @@ export default function VendorsPage() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox for booth images */}
+      {selectedBooth && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedBooth(null)}
+        >
+          <div className="relative max-h-[90vh] max-w-[90vw]">
+            <img 
+              src={selectedBooth} 
+              alt="Enlarged booth view" 
+              className="max-h-[90vh] max-w-[90vw] object-contain"
+            />
+            <button 
+              className="absolute top-2 right-2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedBooth(null);
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 } 
