@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 const LogoHeader = () => {
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div className="relative h-[150px] w-[350px] flex items-center justify-center py-4">
+    <Link href="/" className="relative h-[150px] w-[350px] flex items-center justify-center py-4 cursor-pointer">
       {!imageError && (
         <Image
           src="/images/abingdon-antiques.webp"
@@ -29,7 +30,7 @@ const LogoHeader = () => {
           </div>
         </div>
       )}
-    </div>
+    </Link>
   );
 };
 
