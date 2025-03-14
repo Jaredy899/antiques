@@ -13,14 +13,14 @@ export default function HomePage() {
       <section className="mb-16 rounded-lg bg-sepia-100 p-8 shadow-md">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h1 className="mb-4 text-4xl font-bold text-sepia-900 md:text-5xl">
+            <h1 className="mb-4 text-4xl font-bold text-sepia-900 md:text-5xl text-center">
               Welcome to Abingdon Antiques and More
             </h1>
-            <p className="mb-6 text-lg text-sepia-800">
+            <p className="mb-6 text-lg text-sepia-800 text-center">
               Discover unique treasures from the past at Abingdon Antiques and More Vendor Mall. 
               We offer a wide selection of quality antiques, collectibles, and vintage items.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link 
                 href="/antiques" 
                 className="rounded-md bg-antique-dark px-5 py-2.5 text-white shadow-sm transition-all hover:bg-sepia-800 focus:ring-2 focus:ring-sepia-300"
@@ -34,10 +34,10 @@ export default function HomePage() {
                 Visit Us
               </Link>
             </div>
-            <div className="mt-4">
+            <div className="mt-4 text-center">
               <span className="font-medium text-sepia-800">Follow us:</span>
               <p className="text-sepia-700 text-sm mt-1 mb-2">Stay connected for the latest treasures and antique finds!</p>
-              <div className="mt-2 flex space-x-4">
+              <div className="mt-2 flex space-x-4 justify-center">
                 <a 
                   href="https://www.facebook.com/profile.php?id=61551934216826" 
                   target="_blank" 
