@@ -1,19 +1,16 @@
+version: '3'
+
 services:
-  app:
+  web:
     build:
       context: .
       args:
         - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=${NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
         - CLERK_SECRET_KEY=${CLERK_SECRET_KEY}
-    image: jaredy89/antiques-app:latest
-    container_name: antiques-app
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
       - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=${NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
       - CLERK_SECRET_KEY=${CLERK_SECRET_KEY}
-    restart: unless-stopped
-    # Add any environment variables your app needs
-    # env_file:
-    #   - .env.production 
+    restart: always 

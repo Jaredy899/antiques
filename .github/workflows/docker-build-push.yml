@@ -28,6 +28,11 @@ jobs:
         with:
           context: .
           push: true
-          tags: jaredy89/antiques-app:latest
+          tags: |
+            jaredy89/antiques-app:latest
+            jaredy89/antiques-app:${{ github.sha }}
+          build-args: |
+            NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
+            CLERK_SECRET_KEY=${{ secrets.CLERK_SECRET_KEY }}
           cache-from: type=gha
           cache-to: type=gha,mode=max 
