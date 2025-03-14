@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { UploadDropzone } from '@uploadthing/react';
 import { useUser, SignIn, useClerk } from "@clerk/nextjs";
-import type { OurFileRouter } from '../api/uploadthing/core';
+import type { OurFileRouter } from '../../api/uploadthing/core';
 import Link from 'next/link';
 import Image from 'next/image';
 
