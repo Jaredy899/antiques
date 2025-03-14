@@ -124,6 +124,10 @@ export default function AdminPage() {
     }
   };
 
+  const handleSignOut = () => {
+    void clerk.signOut();
+  };
+
   if (!isLoaded || isLoading) {
     return (
       <div className="mx-auto max-w-6xl px-4 py-12">
@@ -295,6 +299,16 @@ export default function AdminPage() {
           </div>
         </div>
       )}
+
+      {/* Logout Button */}
+      <div className="mt-12 pt-6 border-t border-sepia-200">
+        <button
+          onClick={handleSignOut}
+          className="px-4 py-2 bg-sepia-700 text-white rounded hover:bg-sepia-800 transition-colors"
+        >
+          Sign Out
+        </button>
+      </div>
     </div>
   );
 }
