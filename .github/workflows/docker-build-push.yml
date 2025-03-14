@@ -23,6 +23,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       
+      # Create a .env file for the build
+      - name: Create .env file
+        run: |
+          echo "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}" > .env
+          echo "CLERK_SECRET_KEY=${{ secrets.CLERK_SECRET_KEY }}" >> .env
+          echo "UPLOADTHING_SECRET=${{ secrets.UPLOADTHING_SECRET }}" >> .env
+          echo "UPLOADTHING_APP_ID=${{ secrets.UPLOADTHING_APP_ID }}" >> .env
+      
       - name: Build and push
         uses: docker/build-push-action@v5
         with:

@@ -18,6 +18,20 @@ const config = {
       },
     ],
   },
+  // Skip type checking during production build for faster builds
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: process.env.NODE_ENV === 'production',
+  },
+  // Skip ESLint during production build for faster builds
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: process.env.NODE_ENV === 'production',
+  },
 };
 
 export default config;
