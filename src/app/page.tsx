@@ -134,7 +134,7 @@ export default function HomePage() {
 
       {/* About Us */}
       <section className="mb-16 rounded-lg bg-sepia-100 p-8 shadow-md">
-        <h2 className="mb-6 text-center text-3xl font-bold text-sepia-900">About Abingdon Antiques</h2>
+        <h2 className="mb-6 text-center text-3xl font-bold text-sepia-900">About Abingdon Antiques and More</h2>
         <div className="grid gap-8 md:grid-cols-2">
           <div>
             <p className="mb-4 text-sepia-800">
@@ -143,7 +143,7 @@ export default function HomePage() {
             </p>
             <p className="mb-4 text-sepia-800">
               Whether you&apos;re looking for fine furniture, vintage clothing, rare collectibles, or unique home decor, 
-              you&apos;ll find something special at Abingdon Antiques.
+              you&apos;ll find something special at Abingdon Antiques and More.
             </p>
             <p className="text-sepia-800">
               Visit us today and discover why we&apos;re the region&apos;s premier destination for antiques and collectibles.
