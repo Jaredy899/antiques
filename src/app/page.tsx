@@ -36,6 +36,7 @@ export default function HomePage() {
             </div>
             <div className="mt-4">
               <span className="font-medium text-sepia-800">Follow us:</span>
+              <p className="text-sepia-700 text-sm mt-1 mb-2">Stay connected for the latest treasures and antique finds!</p>
               <div className="mt-2 flex space-x-4">
                 <a 
                   href="https://www.facebook.com/profile.php?id=61551934216826" 
@@ -213,6 +214,7 @@ export default function HomePage() {
           >
             Get Directions
           </Link>
+          <p className="text-sepia-100 text-sm mt-3 mb-2">Follow our social media for the latest on new antiques that have come in — you never know what treasures await!</p>
           <div className="mt-2 flex space-x-6">
             <a 
               href="https://www.facebook.com/profile.php?id=61551934216826" 
