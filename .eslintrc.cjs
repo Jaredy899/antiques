@@ -40,13 +40,6 @@ const config = {
   },
   "overrides": [
     {
-      "files": ["src/app/vendor-portal/page.tsx"],
-      "rules": {
-        "@typescript-eslint/non-nullable-type-assertion-style": "off",
-        "@typescript-eslint/prefer-nullish-coalescing": "off"
-      }
-    },
-    {
       "files": ["src/app/contact/page.tsx"],
       "rules": {
         "@typescript-eslint/no-unused-vars": "off"

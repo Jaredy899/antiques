@@ -113,9 +113,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/vendor-login" className="hover:text-antique-dark transition-colors">
+                <a 
+                  href="https://vendor.quailhq.com" 
+                  className="hover:text-antique-dark transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Vendor Login
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
