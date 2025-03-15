@@ -153,17 +153,19 @@ export default function HomePage() {
             <div key={category} className="rounded-lg bg-white p-4 shadow-md transition-all hover:shadow-lg">
               <CategoryImage category={category} />
               <h3 className="mb-2 text-xl font-semibold text-sepia-900">{category}</h3>
-              <p className="mb-3 text-sepia-700">
-                Explore our selection of quality {category.toLowerCase()} pieces from various eras and styles.
+              <p className="text-sepia-700">
+                We offer a variety of quality {category.toLowerCase()} pieces from various eras and styles.
               </p>
-              <Link 
-                href={`/antiques#${category.toLowerCase().replace(/\s+/g, '-')}`}
-                className="text-antique-dark hover:underline"
-              >
-                View Collection →
-              </Link>
             </div>
           ))}
+        </div>
+        <div className="mt-8 text-center">
+          <Link 
+            href="/antiques"
+            className="inline-block rounded-md bg-antique-dark px-6 py-3 text-white shadow-sm transition-all hover:bg-sepia-800 focus:ring-2 focus:ring-sepia-300"
+          >
+            View All Antiques
+          </Link>
         </div>
       </section>
 
