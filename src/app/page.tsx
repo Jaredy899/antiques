@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       {/* Hero Section */}
-      <section className="mb-16 rounded-lg bg-sepia-100 p-8 shadow-md">
+      <section className="mb-16 rounded-lg bg-sepia-100 bg-opacity-70 p-8 shadow-md">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
             <h1 className="mb-4 text-4xl font-bold text-sepia-900 md:text-5xl text-center font-serif">
