@@ -59,7 +59,7 @@ export default function VendorsPage() {
     return (
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="flex items-center justify-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-sepia-300 border-t-sepia-800"></div>
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-logo-300 border-t-logo-700"></div>
         </div>
       </div>
     );
@@ -70,23 +70,23 @@ export default function VendorsPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="mb-8 text-center text-4xl font-bold text-sepia-900">Our Vendors</h1>
+      <h1 className="mb-8 text-center text-4xl font-bold text-logo-800">Our Vendors</h1>
       
       {/* Vendor Login Banner */}
-      <div className="mb-12 rounded-lg bg-antique-dark p-6 text-center text-white shadow-md">
+      <div className="mb-12 rounded-lg bg-logo-600 p-6 text-center text-white shadow-logo">
         <h2 className="mb-3 text-2xl font-bold">Vendor Portal</h2>
         <p className="mb-4">Current vendors can access their accounts through Quail HQ to manage inventory, track sales, and update settings.</p>
         <a 
           href="https://vendor.quailhq.com" 
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block rounded-md bg-white px-6 py-3 font-medium text-sepia-900 shadow-sm transition-all hover:bg-sepia-50"
+          className="inline-block rounded-md bg-white px-6 py-3 font-medium text-logo-800 shadow-sm transition-all hover:bg-logo-50"
         >
           Access Vendor Portal
         </a>
       </div>
       
-      <p className="mb-12 mx-auto max-w-3xl text-center text-lg text-sepia-800">
+      <p className="mb-12 mx-auto max-w-3xl text-center text-lg text-logo-700">
         Abingdon Antiques and More Vendor Mall hosts over 50 quality vendors specializing in various 
         antiques, collectibles, and vintage items. Each vendor brings their unique expertise and inventory 
         to create a diverse shopping experience.
@@ -94,13 +94,13 @@ export default function VendorsPage() {
       
       {/* Booth Image Gallery */}
       <section className="mb-16">
-        <h2 className="mb-8 text-2xl font-bold text-sepia-900">Vendor Booth Gallery</h2>
+        <h2 className="mb-8 text-2xl font-bold text-logo-800">Vendor Booth Gallery</h2>
         
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {vendorsWithBoothImages.map((vendor, index) => (
             <div 
               key={vendor.id} 
-              className="group aspect-square overflow-hidden rounded-lg bg-sepia-100 cursor-pointer"
+              className="group aspect-square overflow-hidden rounded-lg bg-logo-50 cursor-pointer shadow-logo"
               onClick={() => setSelectedBooth(vendor.boothImage ?? null)}
             >
               <Image
@@ -115,25 +115,25 @@ export default function VendorsPage() {
         </div>
 
         {vendorsWithBoothImages.length === 0 && (
-          <p className="text-center text-sepia-700">
+          <p className="text-center text-logo-600">
             No booth images available yet. Check back soon!
           </p>
         )}
       </section>
       
       {/* Become a Vendor */}
-      <section className="rounded-lg bg-sepia-100 p-8">
+      <section className="rounded-lg bg-logo-50 p-8">
         <div className="grid gap-8 md:grid-cols-2">
           <div>
-            <h2 className="mb-4 text-2xl font-bold text-sepia-900">Become a Vendor</h2>
-            <p className="mb-4 text-sepia-800">
+            <h2 className="mb-4 text-2xl font-bold text-logo-800">Become a Vendor</h2>
+            <p className="mb-4 text-logo-700">
               Join our community of antique and collectible dealers at Abingdon Antiques and More Vendor Mall.
               We offer flexible booth spaces and competitive commission rates in a high-traffic location.
             </p>
-            <p className="mb-4 text-sepia-800">
+            <p className="mb-4 text-logo-700">
               As a vendor, you&apos;ll benefit from:
             </p>
-            <ul className="mb-6 list-disc pl-5 text-sepia-800">
+            <ul className="mb-6 list-disc pl-5 text-logo-700">
               <li>Prime location in historic Abingdon</li>
               <li>Professional sales staff</li>
               <li>Secure, climate-controlled environment</li>
@@ -142,19 +142,19 @@ export default function VendorsPage() {
             </ul>
             <a 
               href="/contact" 
-              className="inline-block rounded-md bg-antique-dark px-5 py-2.5 text-white shadow-sm transition-all hover:bg-sepia-800"
+              className="inline-block rounded-md bg-logo-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-logo-700"
             >
               Inquire About Spaces
             </a>
           </div>
           
-          <div className="rounded-lg bg-white p-6 shadow-md">
-            <h3 className="mb-4 text-xl font-semibold text-sepia-900">Vendor Information</h3>
+          <div className="rounded-lg bg-white p-6 shadow-logo">
+            <h3 className="mb-4 text-xl font-semibold text-logo-800">Vendor Information</h3>
             
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium text-sepia-900">Available Booth Sizes:</h4>
-                <ul className="list-disc pl-5 text-sepia-800">
+                <h4 className="font-medium text-logo-800">Available Booth Sizes:</h4>
+                <ul className="list-disc pl-5 text-logo-700">
                   <li>Small: 6&apos; x 8&apos; ($175/month)</li>
                   <li>Medium: 8&apos; x 10&apos; ($250/month)</li>
                   <li>Large: 10&apos; x 12&apos; ($325/month)</li>
@@ -163,13 +163,13 @@ export default function VendorsPage() {
               </div>
               
               <div>
-                <h4 className="font-medium text-sepia-900">Commission Rate:</h4>
-                <p className="text-sepia-800">10% sales commission on all items sold</p>
+                <h4 className="font-medium text-logo-800">Commission Rate:</h4>
+                <p className="text-logo-700">10% sales commission on all items sold</p>
               </div>
               
               <div>
-                <h4 className="font-medium text-sepia-900">Requirements:</h4>
-                <ul className="list-disc pl-5 text-sepia-800">
+                <h4 className="font-medium text-logo-800">Requirements:</h4>
+                <ul className="list-disc pl-5 text-logo-700">
                   <li>Quality antiques, collectibles, or vintage items</li>
                   <li>Professional display</li>
                   <li>Minimum 3-month rental agreement</li>
@@ -183,28 +183,28 @@ export default function VendorsPage() {
       
       {/* Vendor Testimonials */}
       <section className="mt-16">
-        <h2 className="mb-8 text-2xl font-bold text-sepia-900">What Our Vendors Say</h2>
+        <h2 className="mb-8 text-2xl font-bold text-logo-800">What Our Vendors Say</h2>
         
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-lg bg-white p-6 shadow-md">
-            <blockquote className="border-l-4 border-antique-dark pl-4">
-              <p className="italic text-sepia-800">
+          <div className="rounded-lg bg-white p-6 shadow-logo">
+            <blockquote className="border-l-4 border-logo-600 pl-4">
+              <p className="italic text-logo-700">
                 &quot;I&apos;ve been a vendor at Abingdon Antiques for five years now. The location is excellent, 
                 the staff is professional, and my sales have been consistently strong.&quot;
               </p>
             </blockquote>
-            <p className="mt-4 font-medium text-sepia-900">— Mary Johnson, Heritage Silver</p>
+            <p className="mt-4 font-medium text-logo-800">— Mary Johnson, Heritage Silver</p>
           </div>
           
-          <div className="rounded-lg bg-white p-6 shadow-md">
-            <blockquote className="border-l-4 border-antique-dark pl-4">
-              <p className="italic text-sepia-800">
+          <div className="rounded-lg bg-white p-6 shadow-logo">
+            <blockquote className="border-l-4 border-logo-600 pl-4">
+              <p className="italic text-logo-700">
                 &quot;As a new dealer, I was nervous about starting out, but the team at Abingdon Antiques 
                 was incredibly supportive. The mall gets great foot traffic and my booth has been profitable 
                 from the first month.&quot;
               </p>
             </blockquote>
-            <p className="mt-4 font-medium text-sepia-900">— Robert Williams, Time Capsule Collectibles</p>
+            <p className="mt-4 font-medium text-logo-800">— Robert Williams, Time Capsule Collectibles</p>
           </div>
         </div>
       </section>
