@@ -13,7 +13,7 @@ export default function HomePage() {
       <section className="mb-16 rounded-lg bg-sepia-100 p-8 shadow-md">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h1 className="mb-4 text-4xl font-bold text-sepia-900 md:text-5xl text-center">
+            <h1 className="mb-4 text-4xl font-bold text-sepia-900 md:text-5xl text-center font-serif">
               Welcome to Abingdon Antiques and More
             </h1>
             <p className="mb-6 text-lg text-sepia-800 text-center">
@@ -120,7 +120,7 @@ export default function HomePage() {
       <section className="mb-16 rounded-lg bg-sepia-200 p-8 shadow-md border-2 border-antique-dark">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h2 className="mb-4 text-3xl font-bold text-sepia-900">
+            <h2 className="mb-4 text-3xl font-bold text-sepia-900 font-serif">
               Exciting News!
             </h2>
             <p className="mb-6 text-lg text-sepia-800">
@@ -147,12 +147,12 @@ export default function HomePage() {
 
       {/* Featured Categories */}
       <section className="mb-16">
-        <h2 className="mb-8 text-center text-3xl font-bold text-sepia-900">Featured Categories</h2>
+        <h2 className="mb-8 text-center text-3xl font-bold text-sepia-900 font-serif">Featured Categories</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {["Furniture", "Jewelry", "Art", "Collectibles", "China & Glassware", "Home Decor"].map((category) => (
             <div key={category} className="rounded-lg bg-white p-4 shadow-md transition-all hover:shadow-lg">
               <CategoryImage category={category} />
-              <h3 className="mb-2 text-xl font-semibold text-sepia-900">{category}</h3>
+              <h3 className="mb-2 text-xl font-semibold text-sepia-900 font-serif">{category}</h3>
               <p className="text-sepia-700">
                 We offer a variety of quality {category.toLowerCase()} pieces from various eras and styles.
               </p>
@@ -171,32 +171,32 @@ export default function HomePage() {
 
       {/* About Us */}
       <section className="mb-16 rounded-lg bg-sepia-100 p-8 shadow-md">
-        <h2 className="mb-6 text-center text-3xl font-bold text-sepia-900">About Abingdon Antiques and More</h2>
+        <h2 className="mb-6 text-center text-3xl font-bold text-sepia-900 font-serif">About Abingdon Antiques and More</h2>
         <div className="grid gap-8 md:grid-cols-2">
           <div>
-            <p className="mb-4 text-sepia-800">
+            <p className="mb-4 text-sepia-800 text-center">
               Abingdon Antiques and More Vendor Mall has been serving collectors and enthusiasts for over 20 years. 
               Our vendor mall hosts dozens of skilled dealers, each bringing their unique expertise and inventory.
             </p>
-            <p className="mb-4 text-sepia-800">
+            <p className="mb-4 text-sepia-800 text-center">
               Whether you&apos;re looking for fine furniture, vintage clothing, rare collectibles, or unique home decor, 
               you&apos;ll find something special at Abingdon Antiques and More.
             </p>
-            <p className="text-sepia-800">
+            <p className="text-sepia-800 text-center">
               Visit us today and discover why we&apos;re the region&apos;s premier destination for antiques and collectibles.
             </p>
           </div>
           <div className="flex flex-col gap-4">
             <div className="rounded bg-white p-4 shadow-sm">
-              <h3 className="mb-2 font-semibold text-sepia-900">Quality Selection</h3>
+              <h3 className="mb-2 font-semibold text-sepia-900 font-serif">Quality Selection</h3>
               <p className="text-sepia-700">Curated antiques and collectibles from reputable vendors.</p>
             </div>
             <div className="rounded bg-white p-4 shadow-sm">
-              <h3 className="mb-2 font-semibold text-sepia-900">Expert Knowledge</h3>
+              <h3 className="mb-2 font-semibold text-sepia-900 font-serif">Expert Knowledge</h3>
               <p className="text-sepia-700">Our vendors bring decades of expertise in their specialties.</p>
             </div>
             <div className="rounded bg-white p-4 shadow-sm">
-              <h3 className="mb-2 font-semibold text-sepia-900">New Inventory Weekly</h3>
+              <h3 className="mb-2 font-semibold text-sepia-900 font-serif">New Inventory Weekly</h3>
               <p className="text-sepia-700">Fresh items added regularly for returning customers.</p>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function HomePage() {
 
       {/* Call to Action */}
       <section className="rounded-lg bg-antique-dark p-8 text-center text-white shadow-md">
-        <h2 className="mb-4 text-3xl font-bold">Visit Us Today</h2>
+        <h2 className="mb-4 text-3xl font-bold font-serif">Visit Us Today</h2>
         <p className="mb-6 mx-auto max-w-2xl text-lg">
           Come explore our 15,000 square foot vendor mall filled with antiques, collectibles, and unique treasures.
         </p>
