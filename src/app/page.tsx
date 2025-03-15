@@ -217,7 +217,7 @@ export default function HomePage() {
             Get Directions
           </Link>
           <p className="text-sepia-100 text-sm mt-3 mb-2">Follow our social media for the latest on new antiques that have come in — you never know what treasures await!</p>
-          <div className="mt-2 flex space-x-6">
+          <div className="mt-2 flex flex-wrap gap-4 justify-center">
             <a 
               href="https://www.facebook.com/profile.php?id=61551934216826" 
               target="_blank" 
