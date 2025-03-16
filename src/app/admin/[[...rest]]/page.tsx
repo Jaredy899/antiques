@@ -272,8 +272,8 @@ export default function AdminPage() {
       {/* Vendor Booth Management Tab */}
       {activeTab === 'vendors' && (
         <div>
+          {/* Image Gallery with Delete Option */}
           <h2 className="text-xl font-semibold mb-4">Manage Booth Images</h2>
-          
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8">
             {vendors.filter(vendor => vendor.boothImage).map((vendor) => (
               <div key={vendor.id} className="group relative aspect-square overflow-hidden rounded-lg bg-sepia-100">
@@ -296,6 +296,50 @@ export default function AdminPage() {
                 </button>
               </div>
             ))}
+          </div>
+
+          {vendors.filter(vendor => vendor.boothImage).length === 0 && (
+            <p className="text-center text-sepia-700 mb-8">
+              No booth images uploaded yet. Use the upload area below to add some images.
+            </p>
+          )}
+
+          {/* Upload Section - Moved to bottom and made smaller */}
+          <div className="mt-8 border-t pt-8">
+            <div className="max-w-md mx-auto">
+              <UploadDropzone<OurFileRouter, "imageUploader">
+                endpoint="imageUploader"
+                onClientUploadComplete={(res) => {
+                  if (res && res.length > 0) {
+                    // Assign the image to the first vendor without an image
+                    const vendorWithoutImage = vendors.find(v => !v.boothImage);
+                    const imageUrl = res[0]?.url || "";
+                    
+                    if (vendorWithoutImage && imageUrl) {
+                      void updateVendorBoothImage(vendorWithoutImage.id, imageUrl);
+                    } else {
+                      alert('All vendors already have booth images. Remove some existing images first.');
+                    }
+                  }
+                }}
+                onUploadError={(error: Error) => {
+                  alert(`ERROR! ${error.message}`);
+                }}
+                config={{ mode: "auto" }}
+                appearance={{
+                  button: {
+                    backgroundColor: "#78716c",
+                    color: "white",
+                    padding: "4px 8px",
+                    fontSize: "14px",
+                    borderRadius: "4px"
+                  },
+                  container: "w-full",
+                  allowedContent: "hidden",
+                  uploadIcon: "hidden"
+                }}
+              />
+            </div>
           </div>
         </div>
       )}

@@ -2,28 +2,10 @@
 
 import Link from "next/link";
 import LogoHeader from "./LogoHeader";
-import { useState, useEffect } from "react";
-import { isBrowser } from "~/utils/browserChecks";
+import { useState } from "react";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // Safely handle any window.ethereum-related errors
-  useEffect(() => {
-    if (isBrowser() && window.ethereum) {
-      // Make sure selectedAddress property exists
-      try {
-        // Safely check and set the property using type assertions
-        const ethereum = window.ethereum as { selectedAddress?: unknown };
-        if (ethereum.selectedAddress === undefined) {
-          ethereum.selectedAddress = null;
-        }
-      } catch (_error) {
-        // Error is caught but not used
-        console.log("Note: Could not access window.ethereum properties.");
-      }
-    }
-  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
