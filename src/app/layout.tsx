@@ -6,6 +6,7 @@ import { type Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "~/components/Header";
 import Footer from "~/components/Footer";
+import { ThemeProvider } from "~/utils/ThemeProvider";
 
 // Define antique-style fonts
 const playfair = Playfair_Display({ 
@@ -35,10 +36,12 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={`${playfair.variable} ${baskerville.variable}`}>
-        <body className="flex min-h-screen flex-col bg-sepia-gradient font-serif text-sepia-900">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+        <body className="flex min-h-screen flex-col bg-white dark:bg-logo-900 font-serif text-logo-800 dark:text-logo-100 transition-colors duration-200">
+          <ThemeProvider>
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

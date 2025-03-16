@@ -64,27 +64,27 @@ export default function ContactPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="mb-8 text-center text-4xl font-bold text-sepia-900">Contact Us</h1>
+      <h1 className="mb-8 text-center text-4xl font-bold text-logo-800">Contact Us</h1>
       
       <div className="grid gap-12 md:grid-cols-2">
         {/* Contact Information */}
-        <section className="rounded-lg bg-white p-8 shadow-md">
-          <h2 className="mb-6 text-2xl font-bold text-sepia-900">Get In Touch</h2>
+        <section className="rounded-lg bg-white p-8 shadow-logo">
+          <h2 className="mb-6 text-2xl font-bold text-logo-800">Get In Touch</h2>
           
           <div className="space-y-6">
             <div>
-              <h3 className="mb-2 font-medium text-sepia-900">Phone:</h3>
-              <p className="text-sepia-800"><a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
+              <h3 className="mb-2 font-medium text-logo-800">Phone:</h3>
+              <p className="text-logo-700"><a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
             </div>
             
             <div>
-              <h3 className="mb-2 font-medium text-sepia-900">Email:</h3>
-              <p className="text-sepia-800"><a href="mailto:info@abingdonantiquesandmore.com" className="hover:underline">info@abingdonantiquesandmore.com</a></p>
+              <h3 className="mb-2 font-medium text-logo-800">Email:</h3>
+              <p className="text-logo-700"><a href="mailto:info@abingdonantiquesandmore.com" className="hover:underline">info@abingdonantiquesandmore.com</a></p>
             </div>
             
             <div>
-              <h3 className="mb-2 font-medium text-sepia-900">Address:</h3>
-              <address className="not-italic text-sepia-800">
+              <h3 className="mb-2 font-medium text-logo-800">Address:</h3>
+              <address className="not-italic text-logo-700">
                 <AddressLink address="961 West Main Street, Abingdon, VA 24210">
                   961 West Main Street<br />
                   Abingdon, VA 24210
@@ -93,20 +93,20 @@ export default function ContactPage() {
             </div>
             
             <div>
-              <h3 className="mb-2 font-medium text-sepia-900">Hours:</h3>
-              <p className="mb-1 text-sepia-800">Monday - Saturday: 10:00 AM - 6:00 PM</p>
-              <p className="text-sepia-800">Sunday: 1:00 PM - 4:00 PM</p>
+              <h3 className="mb-2 font-medium text-logo-800">Hours:</h3>
+              <p className="mb-1 text-logo-700">Monday - Saturday: 10:00 AM - 6:00 PM</p>
+              <p className="text-logo-700">Sunday: 1:00 PM - 4:00 PM</p>
             </div>
           </div>
           
-          <div className="mt-8 border-t border-sepia-100 pt-6">
-            <h3 className="mb-4 text-xl font-semibold text-sepia-900">Follow Us</h3>
+          <div className="mt-8 border-t border-logo-100 pt-6">
+            <h3 className="mb-4 text-xl font-semibold text-logo-800">Follow Us</h3>
             <div className="flex space-x-4">
               <a 
                 href="https://www.facebook.com/profile.php?id=61551934216826" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-antique-dark hover:text-sepia-800 transition-colors"
+                className="text-logo-600 hover:text-logo-800 transition-colors"
                 aria-label="Facebook"
               >
                 <svg
@@ -123,7 +123,7 @@ export default function ContactPage() {
                 href="https://www.instagram.com/abingdonantiques?igsh=ajl1MXg1bmdubGpm" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-antique-dark hover:text-sepia-800 transition-colors"
+                className="text-logo-600 hover:text-logo-800 transition-colors"
                 aria-label="Instagram"
               >
                 <svg
@@ -140,7 +140,7 @@ export default function ContactPage() {
                 href="http://www.youtube.com/@AbingdonAntiques" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-antique-dark hover:text-sepia-800 transition-colors"
+                className="text-logo-600 hover:text-logo-800 transition-colors"
                 aria-label="YouTube"
               >
                 <svg
@@ -157,7 +157,7 @@ export default function ContactPage() {
                 href="https://www.tiktok.com/@abingdonantiques?_t=ZP-8ugMjrT3mKk&_r=1" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-antique-dark hover:text-sepia-800 transition-colors"
+                className="text-logo-600 hover:text-logo-800 transition-colors"
                 aria-label="TikTok"
               >
                 <svg
@@ -175,8 +175,8 @@ export default function ContactPage() {
         </section>
         
         {/* Contact Form */}
-        <section className="rounded-lg bg-white p-8 shadow-md">
-          <h2 className="mb-6 text-2xl font-bold text-sepia-900">Send Us a Message</h2>
+        <section className="rounded-lg bg-white p-8 shadow-logo">
+          <h2 className="mb-6 text-2xl font-bold text-logo-800">Send Us a Message</h2>
           
           {formStatus.submitted ? (
             <div className="rounded-md bg-green-50 p-4 text-green-800">
@@ -186,13 +186,13 @@ export default function ContactPage() {
           ) : (
             <form className="space-y-4" onSubmit={handleOnSubmit}>
               <div>
-                <label htmlFor="name" className="mb-1 block font-medium text-sepia-900">
+                <label htmlFor="name" className="mb-1 block font-medium text-logo-800">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className="w-full rounded-md border border-sepia-200 bg-sepia-50 px-4 py-2 focus:border-antique-dark focus:outline-none focus:ring-1 focus:ring-antique-dark"
+                  className="w-full rounded-md border border-logo-200 bg-logo-50 px-4 py-2 focus:border-logo-600 focus:outline-none focus:ring-1 focus:ring-logo-600"
                   value={inputs.name}
                   onChange={handleOnChange}
                   required
@@ -200,13 +200,13 @@ export default function ContactPage() {
               </div>
               
               <div>
-                <label htmlFor="email" className="mb-1 block font-medium text-sepia-900">
+                <label htmlFor="email" className="mb-1 block font-medium text-logo-800">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="w-full rounded-md border border-sepia-200 bg-sepia-50 px-4 py-2 focus:border-antique-dark focus:outline-none focus:ring-1 focus:ring-antique-dark"
+                  className="w-full rounded-md border border-logo-200 bg-logo-50 px-4 py-2 focus:border-logo-600 focus:outline-none focus:ring-1 focus:ring-logo-600"
                   value={inputs.email}
                   onChange={handleOnChange}
                   required
@@ -214,26 +214,26 @@ export default function ContactPage() {
               </div>
               
               <div>
-                <label htmlFor="subject" className="mb-1 block font-medium text-sepia-900">
+                <label htmlFor="subject" className="mb-1 block font-medium text-logo-800">
                   Subject
                 </label>
                 <input
                   type="text"
                   id="subject"
-                  className="w-full rounded-md border border-sepia-200 bg-sepia-50 px-4 py-2 focus:border-antique-dark focus:outline-none focus:ring-1 focus:ring-antique-dark"
+                  className="w-full rounded-md border border-logo-200 bg-logo-50 px-4 py-2 focus:border-logo-600 focus:outline-none focus:ring-1 focus:ring-logo-600"
                   value={inputs.subject}
                   onChange={handleOnChange}
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="mb-1 block font-medium text-sepia-900">
+                <label htmlFor="message" className="mb-1 block font-medium text-logo-800">
                   Message
                 </label>
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full rounded-md border border-sepia-200 bg-sepia-50 px-4 py-2 focus:border-antique-dark focus:outline-none focus:ring-1 focus:ring-antique-dark"
+                  className="w-full rounded-md border border-logo-200 bg-logo-50 px-4 py-2 focus:border-logo-600 focus:outline-none focus:ring-1 focus:ring-logo-600"
                   value={inputs.message}
                   onChange={handleOnChange}
                   required
@@ -248,48 +248,51 @@ export default function ContactPage() {
               
               <button
                 type="submit"
-                className="rounded-md bg-antique-dark px-5 py-2.5 text-white shadow-sm transition-all hover:bg-sepia-800 focus:ring-2 focus:ring-sepia-300 disabled:opacity-70"
                 disabled={formStatus.submitting}
+                className="rounded-md bg-logo-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-logo-700 focus:ring-2 focus:ring-logo-300 disabled:opacity-70"
               >
-                {formStatus.submitting ? "Sending..." : "Send Message"}
+                {formStatus.submitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           )}
         </section>
       </div>
       
-      {/* FAQs Section */}
-      <section className="mt-12 rounded-lg bg-sepia-100 p-8">
-        <h2 className="mb-6 text-2xl font-bold text-sepia-900">Frequently Asked Questions</h2>
+      {/* FAQ Section */}
+      <section className="mt-16 rounded-lg bg-logo-50 p-8">
+        <h2 className="mb-8 text-2xl font-bold text-logo-800">Frequently Asked Questions</h2>
         
         <div className="space-y-6">
           <div>
-            <h3 className="mb-2 text-lg font-semibold text-sepia-900">
-              Do you offer appraisals for antiques?
-            </h3>
-            <p className="text-sepia-800">
-              While we don&apos;t offer formal appraisals, our experienced vendors can provide informal assessments of items&apos; 
-              potential market value. For official appraisals, we recommend contacting a certified appraiser.
+            <h3 className="mb-2 text-xl font-semibold text-logo-800">What are your hours?</h3>
+            <p className="text-logo-700">
+              We are open Monday through Saturday from 10:00 AM to 6:00 PM, and Sunday from 1:00 PM to 4:00 PM.
+              We are closed on major holidays.
             </p>
           </div>
           
           <div>
-            <h3 className="mb-2 text-lg font-semibold text-sepia-900">
-              Can I sell my antiques through your store?
-            </h3>
-            <p className="text-sepia-800">
-              We offer vendor spaces for qualified dealers. Please contact us for information about becoming a vendor 
-              or to inquire about consignment options for individual items.
+            <h3 className="mb-2 text-xl font-semibold text-logo-800">Do you buy antiques?</h3>
+            <p className="text-logo-700">
+              We don&apos;t directly purchase antiques, but our individual vendors may be interested in buying items 
+              that fit their collections. Feel free to contact us, and we can connect you with the appropriate vendor.
             </p>
           </div>
           
           <div>
-            <h3 className="mb-2 text-lg font-semibold text-sepia-900">
-              Do you deliver items?
-            </h3>
-            <p className="text-sepia-800">
-              For larger items, we can arrange delivery for an additional fee within a 50-mile radius. For shipping 
-              further distances, we work with several shipping companies to ensure safe delivery of your purchases.
+            <h3 className="mb-2 text-xl font-semibold text-logo-800">Do you offer appraisals?</h3>
+            <p className="text-logo-700">
+              We do not offer formal appraisals, but our knowledgeable vendors can often provide informal assessments 
+              of items in their areas of expertise.
+            </p>
+          </div>
+          
+          <div>
+            <h3 className="mb-2 text-xl font-semibold text-logo-800">How can I become a vendor?</h3>
+            <p className="text-logo-700">
+              We welcome new vendors who specialize in quality antiques and collectibles. Please visit our 
+              <a href="/vendors" className="text-logo-600 hover:underline"> Vendors page</a> for more information, 
+              or contact us directly to discuss available spaces.
             </p>
           </div>
         </div>

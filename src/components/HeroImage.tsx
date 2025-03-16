@@ -7,7 +7,7 @@ export default function HeroImage() {
   const [hasError, setHasError] = useState(false);
   
   return (
-    <div className="relative h-64 w-full overflow-hidden rounded">
+    <div className="relative h-64 w-full overflow-hidden rounded-lg shadow-logo border border-logo-200">
       {!hasError ? (
         <Image 
           src="/images/antiques/1.webp" 
@@ -19,8 +19,8 @@ export default function HeroImage() {
           onError={() => setHasError(true)}
         />
       ) : (
-        <div className="flex h-full w-full items-center justify-center bg-sepia-200">
-          <span className="text-sepia-500">Antique Display Image</span>
+        <div className="flex h-full w-full items-center justify-center bg-logo-100">
+          <span className="text-logo-600">Antique Display Image</span>
         </div>
       )}
     </div>
