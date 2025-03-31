@@ -70,4 +70,4 @@ docker-compose up -d
 2. If images are not showing up:
    - Verify the images are in the correct directory
    - Check folder permissions
-   - Restart the container: `docker-compose restart` 
+   - Restart the container: `docker-compose restart`
