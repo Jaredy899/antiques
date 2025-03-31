@@ -1,5 +1,5 @@
-# Use Node.js 18 as the base image
-FROM node:18-alpine
+# Use the latest LTS version of Node.js
+FROM node:20-alpine
 
 # Set working directory
 WORKDIR /app
@@ -7,7 +7,7 @@ WORKDIR /app
 # Install pnpm globally
 RUN npm install -g pnpm@10.6.3
 
-# Copy package.json and lockfile
+# Copy package files
 COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies
@@ -15,9 +15,6 @@ RUN pnpm install --frozen-lockfile
 
 # Copy the rest of the application code
 COPY . .
-
-# Copy environment variables for production
-COPY .env.production .env
 
 # Build the application
 RUN pnpm build

@@ -1,85 +1,73 @@
-# Docker Deployment Guide
+# Docker Setup for Abingdon Antiques
 
-This guide explains how to deploy the Abingdon Antiques application using Docker.
+This guide explains how to run the Abingdon Antiques website using Docker.
 
 ## Prerequisites
 
-- Docker installed on your server (instructions at [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/))
-- Docker Compose installed (instructions at [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/))
-- Your application code cloned to the server
+- Docker installed on your system
+- Docker Compose installed on your system
 
-## Deployment Steps
+## Quick Start
 
-1. **Clone the repository** (if not already done)
-   ```bash
-   git clone https://github.com/yourusername/antiques.git
-   cd antiques
-   ```
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd abingdon-antiques
+```
 
-2. **Ensure environment variables are properly set**
-   
-   Check that `.env.production` file has all the required variables:
-   ```
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_key
-   CLERK_SECRET_KEY=your_clerk_secret_key
-   # other variables as needed
-   ```
+2. Build and start the container:
+```bash
+docker-compose up -d
+```
 
-3. **Build and start the Docker container**
-   ```bash
-   # Build and run the container in detached mode
-   docker-compose up -d
-   ```
+The website will be available at `http://localhost:3003`.
 
-4. **Check the application is running**
-   ```bash
-   docker-compose ps
-   # Or check the logs
-   docker-compose logs -f
-   ```
+## Image Management
 
-5. **Access your application**
-   
-   The application will be available at http://your-server-ip:3003
+Images for the antiques and vendors pages are stored in the `public/images` directory:
+- Antique images go in `public/images/antiques/`
+- Vendor images go in `public/images/vendors/`
 
-## Managing the Docker Deployment
+The Docker setup includes a volume mount for the images directory, so any images you add to these folders will be immediately available on the website.
 
-- **Stop the application**
-  ```bash
-  docker-compose down
-  ```
+## Container Management
 
-- **Restart the application**
-  ```bash
-  docker-compose restart
-  ```
+### Start the container
+```bash
+docker-compose up -d
+```
 
-- **Update the application**
-  ```bash
-  git pull
-  docker-compose down
-  docker-compose up --build -d
-  ```
+### Stop the container
+```bash
+docker-compose down
+```
 
-## Production Considerations
+### View logs
+```bash
+docker-compose logs -f
+```
 
-1. **Use a reverse proxy** like Nginx to handle SSL termination and routing
-2. **Configure proper domain** and HTTPS with Let's Encrypt
-3. **Set up monitoring** for the container health
+### Rebuild the container
+```bash
+docker-compose build --no-cache
+docker-compose up -d
+```
+
+## Technical Details
+
+- The application runs on Node.js 20 with the Alpine Linux base image
+- Uses pnpm as the package manager
+- Exposes port 3003 by default (can be changed in docker-compose.yml)
+- Images directory is mounted as a volume for persistent storage
 
 ## Troubleshooting
 
-- **Check container logs**
-  ```bash
-  docker-compose logs nextjs-app
-  ```
+1. If the website is not accessible:
+   - Check if the container is running: `docker-compose ps`
+   - Check the logs: `docker-compose logs -f`
+   - Verify port 3003 is not in use by another application
 
-- **Access the container shell**
-  ```bash
-  docker-compose exec nextjs-app sh
-  ```
-
-- **Rebuild the container**
-  ```bash
-  docker-compose up --build -d
-  ``` 
+2. If images are not showing up:
+   - Verify the images are in the correct directory
+   - Check folder permissions
+   - Restart the container: `docker-compose restart` 

@@ -8,11 +8,8 @@ services:
     ports:
       - "3003:3000"
     restart: always
-    environment:
-      - NODE_ENV=production
-      # Add other environment variables if needed
-      # - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=${NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-      # - CLERK_SECRET_KEY=${CLERK_SECRET_KEY}
+    volumes:
+      - ./public/images:/app/public/images
     # volumes:
     #   - ./:/app
     #   - /app/node_modules
