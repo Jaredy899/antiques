@@ -278,10 +278,10 @@ export default function ContactPage() {
         
         <div className="space-y-6">
           <div>
-            <h3 className="mb-2 text-xl font-semibold text-logo-800">What are your hours?</h3>
+            <h3 className="mb-2 text-xl font-semibold text-logo-800">What types of items do you sell?</h3>
             <p className="text-logo-700">
-              We are open Monday through Saturday from 10:00 AM to 6:00 PM, and Sunday from 1:00 PM to 4:00 PM.
-              We are closed on major holidays.
+              We offer a wide variety of antiques and collectibles, including furniture, jewelry, glassware, 
+              pottery, vintage clothing, and more. Our inventory is constantly changing as we receive new items.
             </p>
           </div>
           
