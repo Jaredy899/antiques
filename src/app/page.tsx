@@ -134,7 +134,7 @@ export default function HomePage() {
           </div>
           <div className="rounded-lg bg-white p-2 shadow-md">
             <Image 
-              src="/images/new-location.jpg" 
+              src="/images/main/new-location.jpg" 
               alt="Our new location at 227 W Main St" 
               className="rounded object-cover"
               width={500}

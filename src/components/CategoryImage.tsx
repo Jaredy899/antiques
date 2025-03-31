@@ -9,7 +9,7 @@ interface CategoryImageProps {
 
 export default function CategoryImage({ category }: CategoryImageProps) {
   const [hasError, setHasError] = useState(false);
-  const imageUrl = `/images/antiques/${category.toLowerCase().replace(/\s+/g, '-')}.webp`;
+  const imageUrl = `/images/main/${category.toLowerCase().replace(/\s+/g, '-')}.webp`;
   
   return (
     <div className="relative mb-4 h-40 w-full overflow-hidden rounded bg-sepia-200">
