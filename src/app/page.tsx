@@ -49,7 +49,11 @@ export default function HomePage() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a 
+<<<<<<< HEAD
             href="https://www.facebook.com/abingdonantiquesandmore" 
+=======
+            href="https://www.facebook.com/profile.php?id=61551934216826" 
+>>>>>>> file-manager
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-md bg-[#1877F2] px-5 py-2.5 text-white shadow-sm transition-all hover:bg-[#166FE5] focus:ring-2 focus:ring-[#1877F2]/50"
@@ -60,7 +64,11 @@ export default function HomePage() {
             Facebook
           </a>
           <a 
+<<<<<<< HEAD
             href="https://www.instagram.com/abingdonantiquesandmore" 
+=======
+            href="https://www.instagram.com/abingdonantiques/" 
+>>>>>>> file-manager
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-md bg-[#E4405F] px-5 py-2.5 text-white shadow-sm transition-all hover:bg-[#D63256] focus:ring-2 focus:ring-[#E4405F]/50"

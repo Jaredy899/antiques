@@ -304,9 +304,8 @@ export default function ContactPage() {
           <div>
             <h3 className="mb-2 text-xl font-semibold text-logo-800">How can I become a vendor?</h3>
             <p className="text-logo-700">
-              We welcome new vendors who specialize in quality antiques and collectibles. Please visit our 
-              <a href="/vendors" className="text-logo-600 hover:underline"> Vendors page</a> for more information, 
-              or contact us directly to discuss available spaces.
+              We welcome new vendors who specialize in quality antiques and collectibles. Please contact us directly 
+              to discuss available spaces and requirements.
             </p>
           </div>
         </div>
