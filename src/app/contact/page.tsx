@@ -82,14 +82,28 @@ export default function ContactPage() {
               <p className="text-logo-700"><a href="mailto:info@abingdonantiquesandmore.com" className="hover:underline">info@abingdonantiquesandmore.com</a></p>
             </div>
             
-            <div>
-              <h3 className="mb-2 font-medium text-logo-800">Address:</h3>
-              <address className="not-italic text-logo-700">
-                <AddressLink address="961 West Main Street, Abingdon, VA 24210">
-                  961 West Main Street<br />
-                  Abingdon, VA 24210
-                </AddressLink>
-              </address>
+            <div className="mb-6">
+              <h3 className="mb-2 font-medium text-logo-800">Addresses:</h3>
+              <div className="space-y-4 text-logo-700">
+                <div>
+                  <p className="font-medium">Main Location:</p>
+                  <address className="not-italic">
+                    <AddressLink address="961 West Main Street, Abingdon, VA 24210">
+                      961 West Main Street<br />
+                      Abingdon, VA 24210
+                    </AddressLink>
+                  </address>
+                </div>
+                <div>
+                  <p className="font-medium">Second Location (Opening April 4th):</p>
+                  <address className="not-italic">
+                    <AddressLink address="227 West Main Street, Abingdon, VA 24210">
+                      227 West Main Street<br />
+                      Abingdon, VA 24210
+                    </AddressLink>
+                  </address>
+                </div>
+              </div>
             </div>
             
             <div>

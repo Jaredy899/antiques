@@ -13,11 +13,23 @@ const Footer = () => {
             <h3 className="mb-3 text-lg font-semibold text-logo-800">Contact Us</h3>
             <p className="mb-2">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
             <p className="mb-2">Email: <a href="mailto:info@abingdonantiquesandmore.com" className="hover:underline">info@abingdonantiquesandmore.com</a></p>
-            <p>
-              <AddressLink address="961 West Main Street, Abingdon, VA 24210">
-                961 West Main Street, Abingdon, VA 24210
-              </AddressLink>
-            </p>
+            <div className="mb-4">
+              <h3 className="mb-2 font-semibold text-logo-800">Addresses:</h3>
+              <div className="space-y-2 text-logo-700">
+                <div>
+                  <p className="font-medium">Main Location:</p>
+                  <AddressLink address="961 West Main Street, Abingdon, VA 24210">
+                    961 West Main Street, Abingdon, VA 24210
+                  </AddressLink>
+                </div>
+                <div>
+                  <p className="font-medium">Second Location (Opening April 4th):</p>
+                  <AddressLink address="227 West Main Street, Abingdon, VA 24210">
+                    227 West Main Street, Abingdon, VA 24210
+                  </AddressLink>
+                </div>
+              </div>
+            </div>
             <div className="mt-4">
               <h4 className="mb-2 font-medium text-logo-800">Follow Us:</h4>
               <div className="flex space-x-4">
