@@ -1,18 +1,9 @@
 import { NextResponse } from "next/server";
 import { writeFile } from "fs/promises";
 import { join } from "path";
-import { auth } from "@clerk/nextjs/server";
 
 export async function POST(request: Request) {
   try {
-    const session = await auth();
-    if (!session.userId) {
-      return NextResponse.json(
-        { error: "Unauthorized" },
-        { status: 401 }
-      );
-    }
-
     const formData = await request.formData();
     const file = formData.get("file") as File;
     const folder = formData.get("folder") as string;

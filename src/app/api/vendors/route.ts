@@ -1,4 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
@@ -89,32 +88,23 @@ export async function GET(): Promise<NextResponse> {
 
 // POST endpoint to update a vendor's booth image
 export async function POST(req: Request): Promise<NextResponse> {
-  const session = await auth();
-  
-  // Only allow authenticated users to modify vendor data
-  if (!session?.userId) {
-    return new NextResponse("Unauthorized", { status: 401 });
-  }
-
   const body = await req.json() as { vendorId: number; boothImage: string };
   const { vendorId, boothImage } = body;
-  
-  if (!vendorId || boothImage === undefined) {
-    return NextResponse.json({ error: "Vendor ID and booth image are required" }, { status: 400 });
-  }
 
   const data = await readVendorsData();
-  
-  // Find the vendor and update their booth image
-  const vendorIndex = data.vendors.findIndex((v: Vendor) => v.id === vendorId);
-  
+  const vendorIndex = data.vendors.findIndex(v => v.id === vendorId);
+
   if (vendorIndex === -1) {
     return NextResponse.json({ error: "Vendor not found" }, { status: 404 });
   }
-  
-  // Use non-null assertion since we've already checked vendorIndex !== -1
-  data.vendors[vendorIndex]!.boothImage = boothImage;
+
+  const vendor = data.vendors[vendorIndex];
+  if (!vendor) {
+    return NextResponse.json({ error: "Vendor not found" }, { status: 404 });
+  }
+
+  vendor.boothImage = boothImage;
   await writeVendorsData(data);
 
-  return NextResponse.json({ success: true, vendor: data.vendors[vendorIndex]! });
+  return NextResponse.json({ success: true });
 } 
