@@ -79,7 +79,7 @@ export default function ContactPage() {
             
             <div>
               <h3 className="mb-2 font-medium text-logo-800">Email:</h3>
-              <p className="text-logo-700"><a href="mailto:info@abingdonantiquesandmore.com" className="hover:underline">info@abingdonantiquesandmore.com</a></p>
+              <p className="text-logo-700"><a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
             </div>
             
             <div className="mb-6">

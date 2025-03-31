@@ -1,6 +1,6 @@
-# Docker Setup for Abingdon Antiques
+# Docker Setup Guide
 
-This guide explains how to run the Abingdon Antiques website using Docker.
+This guide explains how to set up and run the Abingdon Antiques website using Docker.
 
 ## Prerequisites
 
@@ -11,63 +11,72 @@ This guide explains how to run the Abingdon Antiques website using Docker.
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd abingdon-antiques
+git clone https://github.com/Jaredy899/antiques.git
+cd antiques
 ```
 
 2. Build and start the container:
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
-The website will be available at `http://localhost:3003`.
+The website will be available at http://localhost:3000
 
 ## Image Management
 
-Images for the antiques and vendors pages are stored in the `public/images` directory:
-- Antique images go in `public/images/antiques/`
-- Vendor images go in `public/images/vendors/`
+### Building Images
 
-The Docker setup includes a volume mount for the images directory, so any images you add to these folders will be immediately available on the website.
-
-## Container Management
-
-### Start the container
 ```bash
-docker-compose up -d
+# Build the image
+docker compose build
+
+# Rebuild with no cache
+docker compose build --no-cache
 ```
 
-### Stop the container
-```bash
-docker-compose down
-```
+### Container Management
 
-### View logs
 ```bash
-docker-compose logs -f
-```
+# Start containers
+docker compose up -d
 
-### Rebuild the container
-```bash
-docker-compose build --no-cache
-docker-compose up -d
+# Stop containers
+docker compose down
+
+# View logs
+docker compose logs -f
+
+# Restart containers
+docker compose restart
 ```
 
 ## Technical Details
 
-- The application runs on Node.js 20 with the Alpine Linux base image
-- Uses pnpm as the package manager
-- Exposes port 3003 by default (can be changed in docker-compose.yml)
-- Images directory is mounted as a volume for persistent storage
+- The application runs on Node.js 20
+- Uses pnpm for package management
+- Built with Next.js and TypeScript
+- Styled with Tailwind CSS
+- Serves static files from the `public` directory
 
 ## Troubleshooting
 
-1. If the website is not accessible:
-   - Check if the container is running: `docker-compose ps`
-   - Check the logs: `docker-compose logs -f`
-   - Verify port 3003 is not in use by another application
+1. If the container fails to start:
+   ```bash
+   # Check container logs
+   docker compose logs
+   
+   # Check container status
+   docker compose ps
+   ```
 
-2. If images are not showing up:
-   - Verify the images are in the correct directory
-   - Check folder permissions
-   - Restart the container: `docker-compose restart`
+2. If you need to rebuild:
+   ```bash
+   docker compose down
+   docker compose build --no-cache
+   docker compose up -d
+   ```
+
+3. If you need to access the container shell:
+   ```bash
+   docker compose exec nextjs-app sh
+   ```
