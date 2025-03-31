@@ -288,8 +288,8 @@ export default function ContactPage() {
           <div>
             <h3 className="mb-2 text-xl font-semibold text-logo-800">Do you buy antiques?</h3>
             <p className="text-logo-700">
-              We don&apos;t directly purchase antiques, but our individual vendors may be interested in buying items 
-              that fit their collections. Feel free to contact us, and we can connect you with the appropriate vendor.
+              We may be interested in purchasing quality antiques and collectibles that fit our inventory. 
+              Please contact us to discuss what you have available.
             </p>
           </div>
           
