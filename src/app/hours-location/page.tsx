@@ -79,7 +79,7 @@ export default function HoursLocationPage() {
           <div className="mb-6">
             <h3 className="mb-2 font-medium text-logo-800">Contact:</h3>
             <p className="mb-1 text-logo-700">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
-            <p className="text-logo-700">Email: <a href="mailto:info@abingdonantiquesandmore.com" className="hover:underline">info@abingdonantiquesandmore.com</a></p>
+            <p className="text-logo-700">Email: <a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
           </div>
           
           <div className="mb-8">
@@ -137,43 +137,6 @@ export default function HoursLocationPage() {
               ></iframe>
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Nearby Attractions */}
-      <section className="mt-12 rounded-lg bg-logo-50 p-8">
-        <h2 className="mb-6 text-2xl font-bold text-logo-800">Nearby Attractions</h2>
-        <p className="mb-4 text-logo-700">
-          While you&apos;re in the area, why not explore some other local attractions:
-        </p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <a 
-            href="https://visitabingdonvirginia.com/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="rounded bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
-          >
-            <h3 className="mb-1 font-semibold text-logo-800">Historic Downtown</h3>
-            <p className="text-logo-600">Explore the charming historic district with shops and restaurants.</p>
-          </a>
-          <a 
-            href="https://bartertheatre.com/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="rounded bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
-          >
-            <h3 className="mb-1 font-semibold text-logo-800">The Barter Theatre</h3>
-            <p className="text-logo-600">The state theatre of Virginia, offering year-round performances.</p>
-          </a>
-          <a 
-            href="https://www.vacreepertrail.org/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="rounded bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
-          >
-            <h3 className="mb-1 font-semibold text-logo-800">Virginia Creeper Trail</h3>
-            <p className="text-logo-600">A scenic 34-mile multi-purpose trail for hiking and biking.</p>
-          </a>
         </div>
       </section>
     </div>

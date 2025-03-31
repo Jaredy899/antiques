@@ -40,16 +40,6 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/antiques" className="text-logo-600 hover:text-logo-800 transition-colors">
-                Antiques
-              </Link>
-            </li>
-            <li>
-              <Link href="/vendors" className="text-logo-600 hover:text-logo-800 transition-colors">
-                Vendors
-              </Link>
-            </li>
-            <li>
               <Link href="/hours-location" className="text-logo-600 hover:text-logo-800 transition-colors">
                 Hours & Location
               </Link>
@@ -67,16 +57,6 @@ const Header = () => {
               <li>
                 <Link href="/" className="text-logo-600 hover:text-logo-800 transition-colors">
                   Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/antiques" className="text-logo-600 hover:text-logo-800 transition-colors">
-                  Antiques
-                </Link>
-              </li>
-              <li>
-                <Link href="/vendors" className="text-logo-600 hover:text-logo-800 transition-colors">
-                  Vendors
                 </Link>
               </li>
               <li>

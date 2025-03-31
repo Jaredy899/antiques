@@ -1,4 +1,7 @@
-export async function getImagesFromFolder(folder: 'antiques' | 'vendors'): Promise<string[]> {
+import { readdir } from 'fs/promises';
+import { join } from 'path';
+
+export async function getImagesFromFolder(folder: 'main'): Promise<string[]> {
   try {
     const response = await fetch(`/api/images?folder=${folder}`);
     if (!response.ok) {

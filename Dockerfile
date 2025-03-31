@@ -4,16 +4,16 @@ FROM node:20-alpine
 # Set working directory
 WORKDIR /app
 
-# Install pnpm globally
-RUN npm install -g pnpm@10.6.3
+# Install pnpm
+RUN npm install -g pnpm
 
 # Copy package files
 COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies
-RUN pnpm install --frozen-lockfile
+RUN pnpm install
 
-# Copy the rest of the application code
+# Copy the rest of the application
 COPY . .
 
 # Build the application

@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="mb-3 text-lg font-semibold text-logo-800">Contact Us</h3>
             <p className="mb-2">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
-            <p className="mb-2">Email: <a href="mailto:info@abingdonantiquesandmore.com" className="hover:underline">info@abingdonantiquesandmore.com</a></p>
+            <p className="mb-2">Email: <a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
             <div className="mb-4">
               <h3 className="mb-2 font-semibold text-logo-800">Addresses:</h3>
               <div className="space-y-2 text-logo-700">
@@ -108,33 +108,17 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="mb-3 text-lg font-semibold text-logo-800">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/antiques" className="hover:underline">
-                  Antiques
-                </Link>
-              </li>
-              <li>
-                <Link href="/vendors" className="hover:underline">
-                  Vendors
-                </Link>
-              </li>
-              <li>
-                <Link href="/hours-location" className="hover:underline">
-                  Hours & Location
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:underline">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+            <div className="space-y-2">
+              <Link href="/" className="block hover:underline">
+                Home
+              </Link>
+              <Link href="/hours-location" className="block hover:underline">
+                Hours & Location
+              </Link>
+              <Link href="/contact" className="block hover:underline">
+                Contact
+              </Link>
+            </div>
           </div>
 
           {/* Hours */}
@@ -148,15 +132,6 @@ const Footer = () => {
 
         <div className="mt-8 border-t border-logo-200 pt-6 text-center">
           <p>&copy; {currentYear} Abingdon Antiques and More. All rights reserved.</p>
-          <p className="mt-2 text-sm">
-            <Link href="/privacy-policy" className="hover:underline">
-              Privacy Policy
-            </Link>{" "}
-            |{" "}
-            <Link href="/terms-of-service" className="hover:underline">
-              Terms of Service
-            </Link>
-          </p>
         </div>
       </div>
     </footer>

@@ -5,8 +5,6 @@
 
 // Configuration for Next.js
 const config = {
-  // Enable standalone output for production deployment
-  output: 'standalone',
   // Skip type checking during production build for faster builds
   typescript: {
     // !! WARN !!
@@ -21,6 +19,11 @@ const config = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  // Configure static file handling
+  images: {
+    unoptimized: true,
+    domains: ['localhost'],
+  }
 };
 
 export default config;
