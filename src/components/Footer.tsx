@@ -5,27 +5,39 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-sepia-300 bg-sepia-100 py-8 text-sepia-800">
+    <footer className="border-t border-logo-200 bg-logo-50 py-8 text-logo-700">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Contact Info */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold text-sepia-900">Contact Us</h3>
+            <h3 className="mb-3 text-lg font-semibold text-logo-800">Contact Us</h3>
             <p className="mb-2">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
             <p className="mb-2">Email: <a href="mailto:info@abingdonantiquesandmore.com" className="hover:underline">info@abingdonantiquesandmore.com</a></p>
-            <p>
-              <AddressLink address="961 West Main Street, Abingdon, VA 24210">
-                961 West Main Street, Abingdon, VA 24210
-              </AddressLink>
-            </p>
+            <div className="mb-4">
+              <h3 className="mb-2 font-semibold text-logo-800">Addresses:</h3>
+              <div className="space-y-2 text-logo-700">
+                <div>
+                  <p className="font-medium">Main Location:</p>
+                  <AddressLink address="961 West Main Street, Abingdon, VA 24210">
+                    961 West Main Street, Abingdon, VA 24210
+                  </AddressLink>
+                </div>
+                <div>
+                  <p className="font-medium">Second Location (Opening April 4th):</p>
+                  <AddressLink address="227 West Main Street, Abingdon, VA 24210">
+                    227 West Main Street, Abingdon, VA 24210
+                  </AddressLink>
+                </div>
+              </div>
+            </div>
             <div className="mt-4">
-              <h4 className="mb-2 font-medium text-sepia-900">Follow Us:</h4>
+              <h4 className="mb-2 font-medium text-logo-800">Follow Us:</h4>
               <div className="flex space-x-4">
                 <a 
                   href="https://www.facebook.com/profile.php?id=61551934216826" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-antique-dark hover:text-sepia-700 transition-colors"
+                  className="text-logo-600 hover:text-logo-800 transition-colors"
                   aria-label="Facebook"
                 >
                   <svg
@@ -42,7 +54,7 @@ const Footer = () => {
                   href="https://www.instagram.com/abingdonantiques?igsh=ajl1MXg1bmdubGpm" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-antique-dark hover:text-sepia-700 transition-colors"
+                  className="text-logo-600 hover:text-logo-800 transition-colors"
                   aria-label="Instagram"
                 >
                   <svg
@@ -59,7 +71,7 @@ const Footer = () => {
                   href="http://www.youtube.com/@AbingdonAntiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-antique-dark hover:text-sepia-700 transition-colors"
+                  className="text-logo-600 hover:text-logo-800 transition-colors"
                   aria-label="YouTube"
                 >
                   <svg
@@ -76,7 +88,7 @@ const Footer = () => {
                   href="https://www.tiktok.com/@abingdonantiques?_t=ZP-8ugMjrT3mKk&_r=1" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-antique-dark hover:text-sepia-700 transition-colors"
+                  className="text-logo-600 hover:text-logo-800 transition-colors"
                   aria-label="TikTok"
                 >
                   <svg
@@ -95,48 +107,55 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold text-sepia-900">Quick Links</h3>
+            <h3 className="mb-3 text-lg font-semibold text-logo-800">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:text-antique-dark transition-colors">
+                <Link href="/" className="hover:underline">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/antiques" className="hover:text-antique-dark transition-colors">
+                <Link href="/antiques" className="hover:underline">
                   Antiques
                 </Link>
               </li>
               <li>
-                <Link href="/hours-location" className="hover:text-antique-dark transition-colors">
+                <Link href="/vendors" className="hover:underline">
+                  Vendors
+                </Link>
+              </li>
+              <li>
+                <Link href="/hours-location" className="hover:underline">
                   Hours & Location
                 </Link>
               </li>
               <li>
-                <a 
-                  href="https://vendor.quailhq.com" 
-                  className="hover:text-antique-dark transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Vendor Login
-                </a>
+                <Link href="/contact" className="hover:underline">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Hours */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold text-sepia-900">Hours</h3>
+            <h3 className="mb-3 text-lg font-semibold text-logo-800">Hours</h3>
             <p className="mb-2">Monday - Saturday: 10:00 AM - 6:00 PM</p>
             <p className="mb-2">Sunday: 1:00 PM - 4:00 PM</p>
             <p className="italic">Closed on major holidays</p>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-sepia-200 pt-6 text-center">
-          <p>
-            &copy; {currentYear} Abingdon Antiques and More. All rights reserved.
+        <div className="mt-8 border-t border-logo-200 pt-6 text-center">
+          <p>&copy; {currentYear} Abingdon Antiques and More. All rights reserved.</p>
+          <p className="mt-2 text-sm">
+            <Link href="/privacy-policy" className="hover:underline">
+              Privacy Policy
+            </Link>{" "}
+            |{" "}
+            <Link href="/terms-of-service" className="hover:underline">
+              Terms of Service
+            </Link>
           </p>
         </div>
       </div>

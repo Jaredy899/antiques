@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={`${playfair.variable} ${baskerville.variable}`}>
-        <body className="flex min-h-screen flex-col bg-sepia-gradient font-serif text-sepia-900">
+        <body className="flex min-h-screen flex-col bg-white font-serif text-logo-800">
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />

@@ -50,7 +50,7 @@ export default function AntiquesPage() {
     return (
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="flex items-center justify-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-sepia-300 border-t-sepia-800"></div>
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-logo-300 border-t-logo-700"></div>
         </div>
       </div>
     );
@@ -59,7 +59,7 @@ export default function AntiquesPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-sepia-900">Image Gallery</h1>
+        <h1 className="text-4xl font-bold text-logo-800">Image Gallery</h1>
       </div>
 
       {/* Image Gallery */}
@@ -67,7 +67,7 @@ export default function AntiquesPage() {
         {uploadedImages.map((imageUrl, index) => (
           <div 
             key={index} 
-            className="group aspect-square overflow-hidden rounded-lg bg-sepia-100 cursor-pointer"
+            className="group aspect-square overflow-hidden rounded-lg bg-logo-50 cursor-pointer shadow-logo"
             onClick={() => setSelectedImage(imageUrl)}
           >
             <Image
@@ -82,7 +82,7 @@ export default function AntiquesPage() {
       </div>
 
       {uploadedImages.length === 0 && (
-        <p className="text-center text-sepia-700">
+        <p className="text-center text-logo-600">
           No images available.
         </p>
       )}
