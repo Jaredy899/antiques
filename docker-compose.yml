@@ -1,5 +1,6 @@
 services:
   nextjs-app:
+    container_name: abingdon-antiques
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,9 +9,9 @@ services:
     restart: always
     volumes:
       - ./public/images:/app/public/images:rw
-    environment:
-      - NODE_ENV=production
-    # volumes:
-    #   - ./:/app
-    #   - /app/node_modules
-    #   - /app/.next
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
