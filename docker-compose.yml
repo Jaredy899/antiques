@@ -1,17 +1,7 @@
 services:
-  nextjs-app:
-    container_name: abingdon-antiques
-    build:
-      context: .
-      dockerfile: Dockerfile
+  web:
+    container_name: antiques
+    image: ghcr.io/jaredy899/antiques:latest
     ports:
       - "3003:3000"
-    restart: always
-    volumes:
-      - ./public/images:/app/public/images:rw
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
+    restart: unless-stopped 
