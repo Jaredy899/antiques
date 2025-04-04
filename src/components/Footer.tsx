@@ -23,7 +23,7 @@ const Footer = () => {
                   </AddressLink>
                 </div>
                 <div>
-                  <p className="font-medium">Second Location (Opening April 4th):</p>
+                  <p className="font-medium">Second Location (Now Open):</p>
                   <AddressLink address="227 West Main Street, Abingdon, VA 24210">
                     227 West Main Street, Abingdon, VA 24210
                   </AddressLink>

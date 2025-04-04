@@ -87,7 +87,7 @@ export default function HomePage() {
               </AddressLink>
             </p>
             <p className="text-logo-700">
-              We&apos;re expanding to serve you better! Join us for our grand opening on April 4th.
+              We&apos;re expanding to serve you better! Our second location is now open.
             </p>
           </div>
           <div className="rounded-lg bg-white p-2 shadow-md">

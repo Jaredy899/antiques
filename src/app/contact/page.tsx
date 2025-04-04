@@ -95,7 +95,7 @@ export default function ContactPage() {
                   </address>
                 </div>
                 <div>
-                  <p className="font-medium">Second Location (Opening April 4th):</p>
+                  <p className="font-medium">Second Location (Now Open):</p>
                   <address className="not-italic">
                     <AddressLink address="227 West Main Street, Abingdon, VA 24210">
                       227 West Main Street<br />
