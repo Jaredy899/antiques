@@ -81,7 +81,7 @@ export default function HomePage() {
               Exciting News!
             </h2>
             <p className="mb-6 text-lg text-logo-700">
-              <span className="font-semibold">Our new location opens April 4th at:</span><br />
+              <span className="font-semibold">Our new location is now open at:</span><br />
               <AddressLink address="227 W Main St, Abingdon, VA 24210">
                 227 W Main St, Abingdon, VA 24210
               </AddressLink>
