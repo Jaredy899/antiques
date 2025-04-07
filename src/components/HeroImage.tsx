@@ -10,8 +10,8 @@ export default function HeroImage() {
     <div className="relative h-64 w-full overflow-hidden rounded-lg shadow-logo border border-logo-200">
       {!hasError ? (
         <Image 
-          src="/images/antiques/1.webp" 
-          alt="Vintage antiques display" 
+          src="/images/new-location.jpg" 
+          alt="Abingdon Antiques and More New Location" 
           fill 
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"
@@ -20,7 +20,7 @@ export default function HeroImage() {
         />
       ) : (
         <div className="flex h-full w-full items-center justify-center bg-logo-100">
-          <span className="text-logo-600">Antique Display Image</span>
+          <span className="text-logo-600">New Location Image</span>
         </div>
       )}
     </div>

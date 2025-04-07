@@ -27,7 +27,7 @@ export default function HomePage() {
       <section className="relative h-[60vh] min-h-[400px] w-full mb-16">
         <div className="absolute inset-0 bg-black/40 z-10" />
         <Image
-          src="/images/main/1.webp"
+          src="/images/new-location.jpg"
           alt="Abingdon Antiques and More Store Front"
           fill
           className="object-cover"
@@ -35,8 +35,8 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Abingdon Antiques and More</h1>
-            <p className="text-xl md:text-2xl">Discover Unique Treasures</p>
+            <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-4 tracking-wide">Abingdon Antiques and More</h1>
+            <p className="font-playfair text-xl md:text-2xl italic tracking-wide">Discover Unique Treasures</p>
           </div>
         </div>
       </section>
@@ -86,8 +86,8 @@ export default function HomePage() {
                 227 W Main St, Abingdon, VA 24210
               </AddressLink>
             </p>
-            <p className="text-logo-700 dark:text-gray-200">
-              We&apos;re expanding to serve you better! Our second location is now open.
+            <p className="text-logo-700">
+              We&apos;re expanding to serve you better! Our new location is now open.
             </p>
           </div>
           <div className="rounded-lg bg-white dark:bg-gray-700 p-2 shadow-md">
