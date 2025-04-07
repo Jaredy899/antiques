@@ -5,55 +5,55 @@ import AddressLink from '~/components/AddressLink';
 export default function HoursLocationPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="mb-8 text-center text-4xl font-bold text-logo-800">Hours & Location</h1>
+      <h1 className="mb-8 text-center text-4xl font-bold text-logo-800 dark:text-white">Hours & Location</h1>
       
       <div className="grid gap-12 md:grid-cols-2">
         {/* Hours Section */}
-        <section className="rounded-lg bg-white p-8 shadow-logo">
-          <h2 className="mb-6 text-2xl font-bold text-logo-800">Store Hours</h2>
+        <section className="rounded-lg bg-white dark:bg-gray-900 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
+          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white">Store Hours</h2>
           
           <div className="space-y-4">
-            <div className="flex justify-between border-b border-logo-100 pb-2">
-              <span className="font-medium">Monday - Saturday</span>
-              <span>10:00 AM - 6:00 PM</span>
+            <div className="flex justify-between border-b border-logo-100 dark:border-gray-700 pb-2">
+              <span className="font-medium text-logo-800 dark:text-white">Monday - Saturday</span>
+              <span className="text-logo-700 dark:text-gray-300">10:00 AM - 6:00 PM</span>
             </div>
-            <div className="flex justify-between border-b border-logo-100 pb-2">
-              <span className="font-medium">Sunday</span>
-              <span>1:00 PM - 4:00 PM</span>
+            <div className="flex justify-between border-b border-logo-100 dark:border-gray-700 pb-2">
+              <span className="font-medium text-logo-800 dark:text-white">Sunday</span>
+              <span className="text-logo-700 dark:text-gray-300">1:00 PM - 4:00 PM</span>
             </div>
-            <div className="pt-2 text-logo-600 italic">
+            <div className="pt-2 text-logo-600 dark:text-gray-400 italic">
               * Closed on major holidays
             </div>
           </div>
           
           <div className="mt-8">
-            <h3 className="mb-4 text-xl font-semibold text-logo-800">Holiday Schedule</h3>
-            <p className="mb-4 text-logo-700">
+            <h3 className="mb-4 text-xl font-semibold text-logo-800 dark:text-white">Holiday Schedule</h3>
+            <p className="mb-4 text-logo-700 dark:text-gray-300">
               We are closed on the following holidays:
             </p>
-            <ul className="list-disc pl-5 text-logo-700">
+            <ul className="list-disc pl-5 text-logo-700 dark:text-gray-300">
               <li>New Year&apos;s Day</li>
               <li>Easter Sunday</li>
               <li>Independence Day</li>
               <li>Thanksgiving Day</li>
               <li>Christmas Day</li>
             </ul>
-            <p className="mt-4 text-logo-700">
+            <p className="mt-4 text-logo-700 dark:text-gray-300">
               We may have reduced hours on days adjacent to holidays. Please call ahead to confirm.
             </p>
           </div>
         </section>
         
         {/* Location Section */}
-        <section className="rounded-lg bg-white p-8 shadow-logo">
-          <h2 className="mb-6 text-2xl font-bold text-logo-800">Our Locations</h2>
+        <section className="rounded-lg bg-white dark:bg-gray-900 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
+          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white">Our Locations</h2>
           
           {/* Main Location */}
           <div className="mb-8">
             <h3 className="mb-4 text-xl font-semibold text-logo-800">Original Location</h3>
             <div className="mb-4">
-              <h4 className="mb-2 font-medium text-logo-800">Address:</h4>
-              <address className="text-logo-700 not-italic">
+              <h4 className="mb-2 font-medium text-logo-800 dark:text-white">Address:</h4>
+              <address className="text-logo-700 dark:text-gray-300 not-italic">
                 <AddressLink address="961 West Main Street, Abingdon, VA 24210">
                   961 West Main Street<br />
                   Abingdon, VA 24210
@@ -66,8 +66,8 @@ export default function HoursLocationPage() {
           <div className="mb-6">
             <h3 className="mb-4 text-xl font-semibold text-logo-800">New Location</h3>
             <div className="mb-4">
-              <h4 className="mb-2 font-medium text-logo-800">Address:</h4>
-              <address className="text-logo-700 not-italic">
+              <h4 className="mb-2 font-medium text-logo-800 dark:text-white">Address:</h4>
+              <address className="text-logo-700 dark:text-gray-300 not-italic">
                 <AddressLink address="227 West Main Street, Abingdon, VA 24210">
                   227 West Main Street<br />
                   Abingdon, VA 24210
@@ -77,14 +77,14 @@ export default function HoursLocationPage() {
           </div>
           
           <div className="mb-6">
-            <h3 className="mb-2 font-medium text-logo-800">Contact:</h3>
-            <p className="mb-1 text-logo-700">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
-            <p className="text-logo-700">Email: <a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
+            <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Contact:</h3>
+            <p className="mb-1 text-logo-700 dark:text-gray-300">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
+            <p className="text-logo-700 dark:text-gray-300">Email: <a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
           </div>
           
           <div className="mb-8">
-            <h3 className="mb-2 font-medium text-logo-800">Parking:</h3>
-            <p className="text-logo-700">
+            <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Parking:</h3>
+            <p className="text-logo-700 dark:text-gray-300">
               Free parking is available at both locations and on surrounding streets.
             </p>
           </div>
@@ -103,8 +103,8 @@ export default function HoursLocationPage() {
       </div>
       
       {/* Map Section */}
-      <section className="mt-12 rounded-lg bg-white p-2 shadow-logo">
-        <h2 className="mb-6 text-2xl font-bold text-logo-800 text-center">Location Maps</h2>
+      <section className="mt-12 rounded-lg bg-white dark:bg-gray-900 p-2 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
+        <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white text-center">Location Maps</h2>
         <div className="grid gap-8 md:grid-cols-2">
           {/* Main Location Map */}
           <div>
