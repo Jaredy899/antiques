@@ -17,13 +17,13 @@ const Footer = () => {
               <h3 className="mb-2 font-semibold text-logo-800">Addresses:</h3>
               <div className="space-y-2 text-logo-700">
                 <div>
-                  <p className="font-medium">Main Location:</p>
+                  <p className="font-medium">Original Location:</p>
                   <AddressLink address="961 West Main Street, Abingdon, VA 24210">
                     961 West Main Street, Abingdon, VA 24210
                   </AddressLink>
                 </div>
                 <div>
-                  <p className="font-medium">Second Location (Now Open):</p>
+                  <p className="font-medium">New Location:</p>
                   <AddressLink address="227 West Main Street, Abingdon, VA 24210">
                     227 West Main Street, Abingdon, VA 24210
                   </AddressLink>

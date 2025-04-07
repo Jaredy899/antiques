@@ -86,7 +86,7 @@ export default function ContactPage() {
               <h3 className="mb-2 font-medium text-logo-800">Addresses:</h3>
               <div className="space-y-4 text-logo-700">
                 <div>
-                  <p className="font-medium">Main Location:</p>
+                  <p className="font-medium">Original Location:</p>
                   <address className="not-italic">
                     <AddressLink address="961 West Main Street, Abingdon, VA 24210">
                       961 West Main Street<br />
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   </address>
                 </div>
                 <div>
-                  <p className="font-medium">Second Location (Now Open):</p>
+                  <p className="font-medium">New Location:</p>
                   <address className="not-italic">
                     <AddressLink address="227 West Main Street, Abingdon, VA 24210">
                       227 West Main Street<br />

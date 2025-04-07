@@ -87,7 +87,7 @@ export default function HomePage() {
               </AddressLink>
             </p>
             <p className="text-logo-700">
-              We&apos;re expanding to serve you better! Our second location is now open.
+              We&apos;re expanding to serve you better! Our new location is now open.
             </p>
           </div>
           <div className="rounded-lg bg-white p-2 shadow-md">
