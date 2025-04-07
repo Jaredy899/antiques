@@ -206,7 +206,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   id="name"
-                  className="w-full rounded-md border border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
+                  className="w-full rounded-md border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
                   value={inputs.name}
                   onChange={handleOnChange}
                   required
@@ -220,7 +220,7 @@ export default function ContactPage() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full rounded-md border border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
+                  className="w-full rounded-md border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
                   value={inputs.email}
                   onChange={handleOnChange}
                   required
@@ -234,7 +234,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   id="subject"
-                  className="w-full rounded-md border border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
+                  className="w-full rounded-md border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
                   value={inputs.subject}
                   onChange={handleOnChange}
                 />
@@ -247,7 +247,7 @@ export default function ContactPage() {
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full rounded-md border border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
+                  className="w-full rounded-md border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
                   value={inputs.message}
                   onChange={handleOnChange}
                   required
@@ -257,7 +257,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={formStatus.submitting}
-                className="w-full rounded-md bg-logo-600 px-4 py-2 text-white shadow-sm transition-all hover:bg-logo-700 focus:outline-none focus:ring-2 focus:ring-logo-500 focus:ring-offset-2 disabled:opacity-50"
+                className="w-full rounded-md bg-logo-600 px-4 py-2 text-white shadow-sm transition-all hover:bg-logo-700 focus:outline-none focus:ring-2 focus:ring-logo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {formStatus.submitting ? 'Sending...' : 'Send Message'}
               </button>
@@ -267,37 +267,37 @@ export default function ContactPage() {
       </div>
       
       {/* FAQ Section */}
-      <section className="mt-16 rounded-lg bg-logo-50 p-8">
-        <h2 className="mb-8 text-2xl font-bold text-logo-800">Frequently Asked Questions</h2>
+      <section className="mt-16 rounded-lg bg-logo-50 dark:bg-gray-800 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
+        <h2 className="mb-8 text-2xl font-bold text-logo-800 dark:text-white">Frequently Asked Questions</h2>
         
         <div className="space-y-6">
           <div>
-            <h3 className="mb-2 text-xl font-semibold text-logo-800">What types of items do you sell?</h3>
-            <p className="text-logo-700">
+            <h3 className="mb-2 text-xl font-semibold text-logo-800 dark:text-white">What types of items do you sell?</h3>
+            <p className="text-logo-700 dark:text-gray-200">
               We offer a wide variety of antiques and collectibles, including furniture, jewelry, glassware, 
               pottery, vintage clothing, and more. Our inventory is constantly changing as we receive new items.
             </p>
           </div>
           
           <div>
-            <h3 className="mb-2 text-xl font-semibold text-logo-800">Do you buy antiques?</h3>
-            <p className="text-logo-700">
+            <h3 className="mb-2 text-xl font-semibold text-logo-800 dark:text-white">Do you buy antiques?</h3>
+            <p className="text-logo-700 dark:text-gray-200">
               We may be interested in purchasing quality antiques and collectibles that fit our inventory. 
               Please contact us to discuss what you have available.
             </p>
           </div>
           
           <div>
-            <h3 className="mb-2 text-xl font-semibold text-logo-800">Do you offer appraisals?</h3>
-            <p className="text-logo-700">
+            <h3 className="mb-2 text-xl font-semibold text-logo-800 dark:text-white">Do you offer appraisals?</h3>
+            <p className="text-logo-700 dark:text-gray-200">
               We do not offer formal appraisals, but our knowledgeable vendors can often provide informal assessments 
               of items in their areas of expertise.
             </p>
           </div>
           
           <div>
-            <h3 className="mb-2 text-xl font-semibold text-logo-800">How can I become a vendor?</h3>
-            <p className="text-logo-700">
+            <h3 className="mb-2 text-xl font-semibold text-logo-800 dark:text-white">How can I become a vendor?</h3>
+            <p className="text-logo-700 dark:text-gray-200">
               We welcome new vendors who specialize in quality antiques and collectibles. Please contact us directly 
               to discuss available spaces and requirements.
             </p>
