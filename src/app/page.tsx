@@ -78,16 +78,17 @@ export default function HomePage() {
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
             <h2 className="mb-4 text-3xl font-bold text-logo-800 dark:text-white font-serif">
-              Exciting News!
+              We're Moving!
             </h2>
             <p className="mb-6 text-lg text-logo-700 dark:text-gray-200">
-              <span className="font-semibold">Our new location is now open at:</span><br />
+              <span className="font-semibold">We're excited to announce our new location at:</span><br />
               <AddressLink address="227 W Main St, Abingdon, VA 24210">
                 227 W Main St, Abingdon, VA 24210
               </AddressLink>
             </p>
-            <p className="text-logo-700">
-              We&apos;re expanding to serve you better! Our new location is now open.
+            <p className="text-logo-700 dark:text-gray-200">
+              During this transition period, both our current location at <AddressLink address="961 West Main Street, Abingdon, VA 24210">961 West Main Street</AddressLink> and our new location are open for business! 
+              Please note that our current location will be closing soon as we complete our move to the new space.
             </p>
           </div>
           <div className="rounded-lg bg-white dark:bg-gray-700 p-2 shadow-md">
