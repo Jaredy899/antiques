@@ -64,29 +64,29 @@ export default function ContactPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="mb-8 text-center text-4xl font-bold text-logo-800">Contact Us</h1>
+      <h1 className="mb-8 text-center text-4xl font-bold text-logo-800 dark:text-white">Contact Us</h1>
       
       <div className="grid gap-12 md:grid-cols-2">
         {/* Contact Information */}
-        <section className="rounded-lg bg-white p-8 shadow-logo">
-          <h2 className="mb-6 text-2xl font-bold text-logo-800">Get In Touch</h2>
+        <section className="rounded-lg bg-white dark:bg-gray-900 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
+          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white">Get In Touch</h2>
           
           <div className="space-y-6">
             <div>
-              <h3 className="mb-2 font-medium text-logo-800">Phone:</h3>
-              <p className="text-logo-700"><a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
+              <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Phone:</h3>
+              <p className="text-logo-700 dark:text-gray-300"><a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
             </div>
             
             <div>
-              <h3 className="mb-2 font-medium text-logo-800">Email:</h3>
-              <p className="text-logo-700"><a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
+              <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Email:</h3>
+              <p className="text-logo-700 dark:text-gray-300"><a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
             </div>
             
             <div className="mb-6">
-              <h3 className="mb-2 font-medium text-logo-800">Addresses:</h3>
-              <div className="space-y-4 text-logo-700">
+              <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Addresses:</h3>
+              <div className="space-y-4 text-logo-700 dark:text-gray-300">
                 <div>
-                  <p className="font-medium">Main Location:</p>
+                  <p className="font-medium text-logo-800 dark:text-white">Main Location:</p>
                   <address className="not-italic">
                     <AddressLink address="961 West Main Street, Abingdon, VA 24210">
                       961 West Main Street<br />
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   </address>
                 </div>
                 <div>
-                  <p className="font-medium">Second Location (Now Open):</p>
+                  <p className="font-medium text-logo-800 dark:text-white">Second Location (Now Open):</p>
                   <address className="not-italic">
                     <AddressLink address="227 West Main Street, Abingdon, VA 24210">
                       227 West Main Street<br />
@@ -107,20 +107,20 @@ export default function ContactPage() {
             </div>
             
             <div>
-              <h3 className="mb-2 font-medium text-logo-800">Hours:</h3>
-              <p className="mb-1 text-logo-700">Monday - Saturday: 10:00 AM - 6:00 PM</p>
-              <p className="text-logo-700">Sunday: 1:00 PM - 4:00 PM</p>
+              <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Hours:</h3>
+              <p className="mb-1 text-logo-700 dark:text-gray-300">Monday - Saturday: 10:00 AM - 6:00 PM</p>
+              <p className="text-logo-700 dark:text-gray-300">Sunday: 1:00 PM - 4:00 PM</p>
             </div>
           </div>
           
-          <div className="mt-8 border-t border-logo-100 pt-6">
-            <h3 className="mb-4 text-xl font-semibold text-logo-800">Follow Us</h3>
+          <div className="mt-8 border-t border-logo-100 dark:border-gray-700 pt-6">
+            <h3 className="mb-4 text-xl font-semibold text-logo-800 dark:text-white">Follow Us</h3>
             <div className="flex space-x-4">
               <a 
                 href="https://www.facebook.com/profile.php?id=61551934216826" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-logo-600 hover:text-logo-800 transition-colors"
+                className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <svg
@@ -137,7 +137,7 @@ export default function ContactPage() {
                 href="https://www.instagram.com/abingdonantiques?igsh=ajl1MXg1bmdubGpm" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-logo-600 hover:text-logo-800 transition-colors"
+                className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <svg
@@ -154,7 +154,7 @@ export default function ContactPage() {
                 href="http://www.youtube.com/@AbingdonAntiques" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-logo-600 hover:text-logo-800 transition-colors"
+                className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
                 aria-label="YouTube"
               >
                 <svg
@@ -171,7 +171,7 @@ export default function ContactPage() {
                 href="https://www.tiktok.com/@abingdonantiques?_t=ZP-8ugMjrT3mKk&_r=1" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-logo-600 hover:text-logo-800 transition-colors"
+                className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
                 aria-label="TikTok"
               >
                 <svg
@@ -189,24 +189,24 @@ export default function ContactPage() {
         </section>
         
         {/* Contact Form */}
-        <section className="rounded-lg bg-white p-8 shadow-logo">
-          <h2 className="mb-6 text-2xl font-bold text-logo-800">Send Us a Message</h2>
+        <section className="rounded-lg bg-white dark:bg-gray-900 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
+          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white">Send Us a Message</h2>
           
           {formStatus.submitted ? (
-            <div className="rounded-md bg-green-50 p-4 text-green-800">
+            <div className="rounded-md bg-green-50 dark:bg-green-900/50 p-4 text-green-800 dark:text-green-200">
               <p className="text-lg font-medium">{formStatus.info.msg}</p>
               <p className="mt-2">We&apos;ll get back to you as soon as possible.</p>
             </div>
           ) : (
             <form className="space-y-4" onSubmit={handleOnSubmit}>
               <div>
-                <label htmlFor="name" className="mb-1 block font-medium text-logo-800">
+                <label htmlFor="name" className="mb-1 block font-medium text-logo-800 dark:text-white">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className="w-full rounded-md border border-logo-200 bg-logo-50 px-4 py-2 focus:border-logo-600 focus:outline-none focus:ring-1 focus:ring-logo-600"
+                  className="w-full rounded-md border border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
                   value={inputs.name}
                   onChange={handleOnChange}
                   required
@@ -214,13 +214,13 @@ export default function ContactPage() {
               </div>
               
               <div>
-                <label htmlFor="email" className="mb-1 block font-medium text-logo-800">
+                <label htmlFor="email" className="mb-1 block font-medium text-logo-800 dark:text-white">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="w-full rounded-md border border-logo-200 bg-logo-50 px-4 py-2 focus:border-logo-600 focus:outline-none focus:ring-1 focus:ring-logo-600"
+                  className="w-full rounded-md border border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
                   value={inputs.email}
                   onChange={handleOnChange}
                   required
@@ -228,42 +228,36 @@ export default function ContactPage() {
               </div>
               
               <div>
-                <label htmlFor="subject" className="mb-1 block font-medium text-logo-800">
+                <label htmlFor="subject" className="mb-1 block font-medium text-logo-800 dark:text-white">
                   Subject
                 </label>
                 <input
                   type="text"
                   id="subject"
-                  className="w-full rounded-md border border-logo-200 bg-logo-50 px-4 py-2 focus:border-logo-600 focus:outline-none focus:ring-1 focus:ring-logo-600"
+                  className="w-full rounded-md border border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
                   value={inputs.subject}
                   onChange={handleOnChange}
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="mb-1 block font-medium text-logo-800">
+                <label htmlFor="message" className="mb-1 block font-medium text-logo-800 dark:text-white">
                   Message
                 </label>
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full rounded-md border border-logo-200 bg-logo-50 px-4 py-2 focus:border-logo-600 focus:outline-none focus:ring-1 focus:ring-logo-600"
+                  className="w-full rounded-md border border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
                   value={inputs.message}
                   onChange={handleOnChange}
                   required
-                ></textarea>
+                />
               </div>
-              
-              {formStatus.info.error && (
-                <div className="rounded-md bg-red-50 p-4 text-red-800">
-                  <p>{formStatus.info.msg}</p>
-                </div>
-              )}
               
               <button
                 type="submit"
                 disabled={formStatus.submitting}
-                className="rounded-md bg-logo-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-logo-700 focus:ring-2 focus:ring-logo-300 disabled:opacity-70"
+                className="w-full rounded-md bg-logo-600 px-4 py-2 text-white shadow-sm transition-all hover:bg-logo-700 focus:outline-none focus:ring-2 focus:ring-logo-500 focus:ring-offset-2 disabled:opacity-50"
               >
                 {formStatus.submitting ? 'Sending...' : 'Send Message'}
               </button>

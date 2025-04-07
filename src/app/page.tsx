@@ -42,9 +42,9 @@ export default function HomePage() {
       </section>
 
       {/* Social Media Section */}
-      <section className="mb-16 rounded-lg bg-logo-100 p-8 text-center">
-        <h2 className="mb-4 text-2xl font-bold text-logo-800">Stay Connected!</h2>
-        <p className="mb-6 text-logo-700">
+      <section className="mb-16 rounded-lg bg-logo-100 dark:bg-gray-800 p-8 text-center transition-colors duration-200">
+        <h2 className="mb-4 text-2xl font-bold text-logo-800 dark:text-white">Stay Connected!</h2>
+        <p className="mb-6 text-logo-700 dark:text-gray-300">
           Follow us on social media for the latest updates, new arrivals, pictures, and videos!
         </p>
         <div className="flex flex-wrap justify-center gap-4">
@@ -74,23 +74,23 @@ export default function HomePage() {
       </section>
 
       {/* New Location Announcement */}
-      <section className="mb-16 rounded-lg bg-logo-200 p-8 shadow-logo border-2 border-logo-600">
+      <section className="mb-16 rounded-lg bg-logo-200 dark:bg-gray-800 p-8 shadow-logo dark:shadow-gray-800 border-2 border-logo-600 dark:border-gray-600 transition-colors duration-200">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h2 className="mb-4 text-3xl font-bold text-logo-800 font-serif">
+            <h2 className="mb-4 text-3xl font-bold text-logo-800 dark:text-white font-serif">
               Exciting News!
             </h2>
-            <p className="mb-6 text-lg text-logo-700">
+            <p className="mb-6 text-lg text-logo-700 dark:text-gray-300">
               <span className="font-semibold">Our new location is now open at:</span><br />
               <AddressLink address="227 W Main St, Abingdon, VA 24210">
                 227 W Main St, Abingdon, VA 24210
               </AddressLink>
             </p>
-            <p className="text-logo-700">
+            <p className="text-logo-700 dark:text-gray-300">
               We&apos;re expanding to serve you better! Our second location is now open.
             </p>
           </div>
-          <div className="rounded-lg bg-white p-2 shadow-md">
+          <div className="rounded-lg bg-white dark:bg-gray-900 p-2 shadow-md transition-colors duration-200">
             <Image 
               src="/images/new-location.jpg" 
               alt="Our new location at 227 W Main St" 
@@ -103,34 +103,34 @@ export default function HomePage() {
       </section>
 
       {/* About Us */}
-      <section className="mb-16 rounded-lg bg-white p-8 shadow-logo">
-        <h2 className="mb-6 text-center text-3xl font-bold text-logo-800 font-serif">About Abingdon Antiques and More</h2>
+      <section className="mb-16 rounded-lg bg-white dark:bg-gray-900 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
+        <h2 className="mb-6 text-center text-3xl font-bold text-logo-800 dark:text-white font-serif">About Abingdon Antiques and More</h2>
         <div className="grid gap-8 md:grid-cols-2">
           <div>
-            <p className="mb-4 text-logo-700 text-center">
+            <p className="mb-4 text-logo-700 dark:text-gray-300 text-center">
               Abingdon Antiques and More Vendor Mall brings together a community of experienced dealers, 
               each bringing their unique expertise and carefully curated inventory.
             </p>
-            <p className="mb-4 text-logo-700 text-center">
+            <p className="mb-4 text-logo-700 dark:text-gray-300 text-center">
               Whether you&apos;re looking for fine furniture, vintage clothing, rare collectibles, or unique home decor, 
               you&apos;ll find something special at Abingdon Antiques and More.
             </p>
-            <p className="text-logo-700 text-center">
+            <p className="text-logo-700 dark:text-gray-300 text-center">
               Visit us today and discover why we&apos;re becoming the region&apos;s premier destination for antiques and collectibles.
             </p>
           </div>
           <div className="flex flex-col gap-4">
-            <div className="rounded bg-logo-50 p-4 shadow-sm">
-              <h3 className="mb-2 font-semibold text-logo-800 font-serif">Quality Selection</h3>
-              <p className="text-logo-700">Curated antiques and collectibles from reputable vendors.</p>
+            <div className="rounded bg-logo-50 dark:bg-gray-800 p-4 shadow-sm transition-colors duration-200">
+              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white font-serif">Quality Selection</h3>
+              <p className="text-logo-700 dark:text-gray-300">Curated antiques and collectibles from reputable vendors.</p>
             </div>
-            <div className="rounded bg-logo-50 p-4 shadow-sm">
-              <h3 className="mb-2 font-semibold text-logo-800 font-serif">Expert Knowledge</h3>
-              <p className="text-logo-700">Our vendors bring decades of expertise in their specialties.</p>
+            <div className="rounded bg-logo-50 dark:bg-gray-800 p-4 shadow-sm transition-colors duration-200">
+              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white font-serif">Expert Knowledge</h3>
+              <p className="text-logo-700 dark:text-gray-300">Our vendors bring decades of expertise in their specialties.</p>
             </div>
-            <div className="rounded bg-logo-50 p-4 shadow-sm">
-              <h3 className="mb-2 font-semibold text-logo-800 font-serif">New Inventory Weekly</h3>
-              <p className="text-logo-700">Fresh items added regularly for returning customers.</p>
+            <div className="rounded bg-logo-50 dark:bg-gray-800 p-4 shadow-sm transition-colors duration-200">
+              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white font-serif">New Inventory Weekly</h3>
+              <p className="text-logo-700 dark:text-gray-300">Fresh items added regularly for returning customers.</p>
             </div>
           </div>
         </div>
@@ -139,10 +139,10 @@ export default function HomePage() {
       {/* Image Gallery */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Featured Items</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-logo-800 dark:text-white">Featured Items</h2>
           {loading ? (
             <div className="flex justify-center items-center h-64">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-logo-600"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-logo-600 dark:border-gray-400"></div>
             </div>
           ) : images.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -163,7 +163,7 @@ export default function HomePage() {
               ))}
             </div>
           ) : (
-            <p className="text-center text-gray-600">No images available.</p>
+            <p className="text-center text-gray-600 dark:text-gray-400">No images available.</p>
           )}
         </div>
       </section>
@@ -194,11 +194,11 @@ export default function HomePage() {
       )}
 
       {/* Call to Action */}
-      <section className="rounded-lg bg-logo-100 p-8 text-center">
-        <h2 className="mb-4 text-3xl font-bold text-logo-800">
+      <section className="rounded-lg bg-logo-100 dark:bg-gray-800 p-8 text-center transition-colors duration-200">
+        <h2 className="mb-4 text-3xl font-bold text-logo-800 dark:text-white">
           Ready to Discover Unique Treasures?
         </h2>
-        <p className="mb-6 text-lg text-logo-700">
+        <p className="mb-6 text-lg text-logo-700 dark:text-gray-300">
           Visit Abingdon Antiques and More today to find one-of-a-kind items with history and character.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
@@ -210,7 +210,7 @@ export default function HomePage() {
           </Link>
           <Link 
             href="/contact" 
-            className="rounded-md border border-logo-600 bg-transparent px-5 py-2.5 text-logo-700 shadow-sm transition-all hover:bg-logo-50 focus:ring-2 focus:ring-logo-300"
+            className="rounded-md border border-logo-600 dark:border-gray-600 bg-transparent px-5 py-2.5 text-logo-700 dark:text-gray-300 shadow-sm transition-all hover:bg-logo-50 dark:hover:bg-gray-700 focus:ring-2 focus:ring-logo-300"
           >
             Contact Us
           </Link>
