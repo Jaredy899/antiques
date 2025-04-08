@@ -23,13 +23,13 @@ export default function HomePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] w-full mb-16">
+      <section className="relative h-[70vh] min-h-[500px] w-full mb-16">
         <div className="absolute inset-0 bg-black/40 z-10" />
         <Image
           src="/images/main-street-new.jpg"
           alt="Abingdon Antiques and More Store Front"
           fill
-          className="object-cover"
+          className="object-cover object-left"
           priority
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
