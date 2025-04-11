@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { Playfair_Display, Libre_Baskerville } from "next/font/google";
 import { type Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
 import Header from "~/components/Header";
 import Footer from "~/components/Footer";
 import { ThemeProvider } from "~/components/ThemeProvider";
