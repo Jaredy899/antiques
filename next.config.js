@@ -31,7 +31,9 @@ const config = {
         pathname: '/f/**',
       },
     ],
-  }
+  },
+  // Allow cross-origin requests during development
+  allowedDevOrigins: ['10.24.24.6', '100.86.190.124']
 };
 
 export default config;
