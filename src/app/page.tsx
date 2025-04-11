@@ -1,32 +1,32 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from "next/link";
-import Image from "next/image";
 import AddressLink from "~/components/AddressLink";
-import { getImagesFromFolder } from '~/utils/images';
+import OptimizedImage from "~/components/OptimizedImage";
+import ImageGallery from "~/components/ImageGallery";
 
 export default function HomePage() {
-  const [images, setImages] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    const loadImages = async () => {
-      const mainImages = await getImagesFromFolder('main');
-      setImages(mainImages);
-      setLoading(false);
-    };
-    loadImages();
-  }, []);
+  // Hardcoded image URLs
+  const galleryImages = [
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsZkQKnRtPE1NxDIg9rh86Bi4RfTSylb3eKdGm",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsy80sfRDG1JbILFWOoMAgx7P49VvUj5rZXtNe",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsApRfExb1pPWKB2MoR9DLV5lmCjvsJGYxX3nw",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsqeVP8aAo2pXgV7HBurPdSzmyUO5CK9f0lx1s",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFse4NPZbYKjfQh6uHwcvo0mnFrP8DByULaObG4",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFssWQENxRiwGqRQXjaOTYzH816lIkchyoC9txN",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsED72c492bga4hAVdszcfGZt3vDSkFJe8rKwR",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsd1SLKG2VFBmf9HhQVLJpzkqGNjtM6ZlxcgPW",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFs9bWwcqG8Hgw3jA5IqYdvuJ9CRS7lKfZzEa1L",
+  ];
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] w-full mb-16">
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <Image
-          src="/images/main-street-new.jpg"
+        <OptimizedImage
+          src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFs7JnlQPMWntGHVqNQ4dFc7j52XlJrsP8Obg0x"
           alt="Abingdon Antiques and More Store Front"
           fill
           className="object-cover object-left"
@@ -91,8 +91,8 @@ export default function HomePage() {
             </p>
           </div>
           <div className="rounded-lg bg-white dark:bg-gray-700 p-2 shadow-md">
-            <Image 
-              src="/images/new-location.jpg" 
+            <OptimizedImage 
+              src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsWShw4AnAoZYFIrpQJyB8wcDh0eKmCV6iTnMg" 
               alt="Our new location at 227 W Main St" 
               className="rounded object-cover"
               width={500}
@@ -139,59 +139,14 @@ export default function HomePage() {
       {/* Image Gallery */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Featured Items</h2>
-          {loading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-logo-600"></div>
-            </div>
-          ) : images.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {images.map((image, index) => (
-                <div
-                  key={index}
-                  className="relative aspect-square cursor-pointer group"
-                  onClick={() => setSelectedImage(image)}
-                >
-                  <Image
-                    src={image}
-                    alt={`Featured item ${index + 1}`}
-                    fill
-                    className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg" />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="text-center text-gray-600">No images available.</p>
-          )}
+          <ImageGallery 
+            images={galleryImages} 
+            title="Featured Items" 
+            columns={3} 
+            aspectRatio="square" 
+          />
         </div>
       </section>
-
-      {/* Lightbox */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-4xl w-full">
-            <button
-              className="absolute -top-12 right-0 text-white hover:text-gray-300"
-              onClick={() => setSelectedImage(null)}
-            >
-              Close
-            </button>
-            <div className="relative aspect-square">
-              <Image
-                src={selectedImage}
-                alt="Selected item"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Call to Action */}
       <section className="rounded-lg bg-logo-100 dark:bg-gray-800 p-8 text-center shadow-logo dark:shadow-gray-800 transition-colors duration-200">
