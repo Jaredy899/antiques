@@ -11,10 +11,13 @@ export default function HomePage() {
   const galleryImages = [
     "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsZkQKnRtPE1NxDIg9rh86Bi4RfTSylb3eKdGm",
     "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsy80sfRDG1JbILFWOoMAgx7P49VvUj5rZXtNe",
-    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFs7JnlQPMWntGHVqNQ4dFc7j52XlJrsP8Obg0x",
-    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsWShw4AnAoZYFIrpQJyB8wcDh0eKmCV6iTnMg",
-    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFs7JnlQPMWntGHVqNQ4dFc7j52XlJrsP8Obg0x",
-    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsWShw4AnAoZYFIrpQJyB8wcDh0eKmCV6iTnMg",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsApRfExb1pPWKB2MoR9DLV5lmCjvsJGYxX3nw",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsqeVP8aAo2pXgV7HBurPdSzmyUO5CK9f0lx1s",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFse4NPZbYKjfQh6uHwcvo0mnFrP8DByULaObG4",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFssWQENxRiwGqRQXjaOTYzH816lIkchyoC9txN",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsED72c492bga4hAVdszcfGZt3vDSkFJe8rKwR",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsd1SLKG2VFBmf9HhQVLJpzkqGNjtM6ZlxcgPW",
+    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFs9bWwcqG8Hgw3jA5IqYdvuJ9CRS7lKfZzEa1L",
   ];
 
   return (
