@@ -23,6 +23,14 @@ const config = {
   images: {
     unoptimized: true,
     domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'xfcpn2nyfb.ufs.sh',
+        port: '',
+        pathname: '/f/**',
+      },
+    ],
   }
 };
 
