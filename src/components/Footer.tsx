@@ -85,7 +85,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://www.tiktok.com/@abingdonantiques?_t=ZP-8ugMjrT3mKk&_r=1" 
+                  href="https://www.tiktok.com/@abingdonantiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
