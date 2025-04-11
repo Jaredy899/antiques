@@ -21,8 +21,6 @@ const config = {
   },
   // Configure static file handling
   images: {
-    unoptimized: true,
-    domains: ['localhost'],
     remotePatterns: [
       {
         protocol: 'https',
