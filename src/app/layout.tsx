@@ -35,7 +35,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${baskerville.variable}`}>
-      <body className="flex min-h-screen flex-col bg-white dark:bg-gray-900 font-serif text-logo-800 dark:text-gray-100 transition-colors duration-200">
+      <body className="flex min-h-screen flex-col bg-white dark:bg-logo-dark-50 font-serif text-logo-800 dark:text-logo-dark-100 transition-colors duration-200">
         <ThemeProvider>
           <Header />
           <main className="flex-grow">{children}</main>
