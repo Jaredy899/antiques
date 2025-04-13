@@ -1,6 +1,5 @@
 import "~/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
 import { Playfair_Display, Libre_Baskerville } from "next/font/google";
 import { type Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";

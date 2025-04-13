@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Link from "next/link";
 import AddressLink from "~/components/AddressLink";
 import OptimizedImage from "~/components/OptimizedImage";
