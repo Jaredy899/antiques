@@ -14,16 +14,9 @@ const Footer = () => {
             <p className="mb-2">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
             <p className="mb-2">Email: <a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
             <div className="mb-4">
-              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white">Addresses:</h3>
+              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white">Address:</h3>
               <div className="space-y-2 text-logo-700 dark:text-gray-300">
                 <div>
-                  <p className="font-medium">Original Location:</p>
-                  <AddressLink address="961 West Main Street, Abingdon, VA 24210">
-                    961 West Main Street, Abingdon, VA 24210
-                  </AddressLink>
-                </div>
-                <div>
-                  <p className="font-medium">New Location:</p>
                   <AddressLink address="227 West Main Street, Abingdon, VA 24210">
                     227 West Main Street, Abingdon, VA 24210
                   </AddressLink>
