@@ -68,21 +68,21 @@ export default function ContactPage() {
       
       <div className="grid gap-12 md:grid-cols-2">
         {/* Contact Information */}
-        <section className="rounded-lg bg-white dark:bg-gray-900 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white">Get In Touch</h2>
+        <section className="rounded-xl bg-white dark:bg-gray-900 p-8 shadow-lg dark:shadow-gray-800/50 border border-logo-100 dark:border-gray-700 hover:shadow-xl dark:hover:shadow-gray-800 transition-all duration-300">
+          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white border-b border-logo-100 dark:border-gray-700 pb-4">Get In Touch</h2>
           
           <div className="space-y-6">
-            <div>
+            <div className="p-4 rounded-lg bg-logo-50 dark:bg-gray-800/50">
               <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Phone:</h3>
               <p className="text-logo-700 dark:text-gray-300"><a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
             </div>
             
-            <div>
+            <div className="p-4 rounded-lg bg-logo-50 dark:bg-gray-800/50">
               <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Email:</h3>
               <p className="text-logo-700 dark:text-gray-300"><a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
             </div>
             
-            <div className="mb-6">
+            <div className="p-4 rounded-lg bg-logo-50 dark:bg-gray-800/50">
               <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Address:</h3>
               <div className="space-y-4 text-logo-700 dark:text-gray-300">
                 <div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
               </div>
             </div>
             
-            <div>
+            <div className="p-4 rounded-lg bg-logo-50 dark:bg-gray-800/50">
               <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Hours:</h3>
               <p className="mb-1 text-logo-700 dark:text-gray-300">Monday - Saturday: 10:00 AM - 6:00 PM</p>
               <p className="text-logo-700 dark:text-gray-300">Sunday: 1:00 PM - 4:00 PM</p>
@@ -179,65 +179,65 @@ export default function ContactPage() {
         </section>
         
         {/* Contact Form */}
-        <section className="rounded-lg bg-white dark:bg-gray-900 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white">Send Us a Message</h2>
+        <section className="rounded-xl bg-white dark:bg-gray-900 p-8 shadow-lg dark:shadow-gray-800/50 border border-logo-100 dark:border-gray-700 hover:shadow-xl dark:hover:shadow-gray-800 transition-all duration-300">
+          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white border-b border-logo-100 dark:border-gray-700 pb-4">Send Us a Message</h2>
           
           {formStatus.submitted ? (
-            <div className="rounded-md bg-green-50 dark:bg-green-900/50 p-4 text-green-800 dark:text-green-200">
+            <div className="rounded-lg bg-green-50 dark:bg-green-900/50 p-6 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-800">
               <p className="text-lg font-medium">{formStatus.info.msg}</p>
               <p className="mt-2">We&apos;ll get back to you as soon as possible.</p>
             </div>
           ) : (
-            <form className="space-y-4" onSubmit={handleOnSubmit}>
-              <div>
-                <label htmlFor="name" className="mb-1 block font-medium text-logo-800 dark:text-white">
+            <form className="space-y-6" onSubmit={handleOnSubmit}>
+              <div className="p-4 rounded-lg bg-logo-50 dark:bg-gray-800/50">
+                <label htmlFor="name" className="mb-2 block font-medium text-logo-800 dark:text-white">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className="w-full rounded-md border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
+                  className="w-full rounded-lg border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2.5 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-2 focus:ring-logo-600/20 dark:focus:ring-logo-400/20 transition-colors"
                   value={inputs.name}
                   onChange={handleOnChange}
                   required
                 />
               </div>
               
-              <div>
-                <label htmlFor="email" className="mb-1 block font-medium text-logo-800 dark:text-white">
+              <div className="p-4 rounded-lg bg-logo-50 dark:bg-gray-800/50">
+                <label htmlFor="email" className="mb-2 block font-medium text-logo-800 dark:text-white">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="w-full rounded-md border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
+                  className="w-full rounded-lg border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2.5 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-2 focus:ring-logo-600/20 dark:focus:ring-logo-400/20 transition-colors"
                   value={inputs.email}
                   onChange={handleOnChange}
                   required
                 />
               </div>
               
-              <div>
-                <label htmlFor="subject" className="mb-1 block font-medium text-logo-800 dark:text-white">
+              <div className="p-4 rounded-lg bg-logo-50 dark:bg-gray-800/50">
+                <label htmlFor="subject" className="mb-2 block font-medium text-logo-800 dark:text-white">
                   Subject
                 </label>
                 <input
                   type="text"
                   id="subject"
-                  className="w-full rounded-md border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
+                  className="w-full rounded-lg border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2.5 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-2 focus:ring-logo-600/20 dark:focus:ring-logo-400/20 transition-colors"
                   value={inputs.subject}
                   onChange={handleOnChange}
                 />
               </div>
               
-              <div>
-                <label htmlFor="message" className="mb-1 block font-medium text-logo-800 dark:text-white">
+              <div className="p-4 rounded-lg bg-logo-50 dark:bg-gray-800/50">
+                <label htmlFor="message" className="mb-2 block font-medium text-logo-800 dark:text-white">
                   Message
                 </label>
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full rounded-md border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-1 focus:ring-logo-600 dark:focus:ring-logo-400"
+                  className="w-full rounded-lg border border-logo-200 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2.5 text-logo-800 dark:text-white focus:border-logo-600 dark:focus:border-logo-400 focus:outline-none focus:ring-2 focus:ring-logo-600/20 dark:focus:ring-logo-400/20 transition-colors"
                   value={inputs.message}
                   onChange={handleOnChange}
                   required
@@ -247,7 +247,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={formStatus.submitting}
-                className="w-full rounded-md bg-logo-600 px-4 py-2 text-white shadow-sm transition-all hover:bg-logo-700 focus:outline-none focus:ring-2 focus:ring-logo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full rounded-lg bg-logo-600 px-6 py-3 text-white shadow-sm transition-all hover:bg-logo-700 focus:outline-none focus:ring-2 focus:ring-logo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {formStatus.submitting ? 'Sending...' : 'Send Message'}
               </button>
@@ -257,11 +257,11 @@ export default function ContactPage() {
       </div>
       
       {/* FAQ Section */}
-      <section className="mt-16 rounded-lg bg-logo-50 dark:bg-gray-800 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-        <h2 className="mb-8 text-2xl font-bold text-logo-800 dark:text-white">Frequently Asked Questions</h2>
+      <section className="mt-16 rounded-xl bg-logo-50 dark:bg-gray-800 p-8 shadow-lg dark:shadow-gray-800/50 border border-logo-100 dark:border-gray-700 hover:shadow-xl dark:hover:shadow-gray-800 transition-all duration-300">
+        <h2 className="mb-8 text-2xl font-bold text-logo-800 dark:text-white border-b border-logo-100 dark:border-gray-700 pb-4">Frequently Asked Questions</h2>
         
-        <div className="space-y-6">
-          <div>
+        <div className="space-y-8">
+          <div className="p-4 rounded-lg bg-white dark:bg-gray-900/50">
             <h3 className="mb-2 text-xl font-semibold text-logo-800 dark:text-white">What types of items do you sell?</h3>
             <p className="text-logo-700 dark:text-gray-200">
               We offer a wide variety of antiques and collectibles, including furniture, jewelry, glassware, 
@@ -269,7 +269,7 @@ export default function ContactPage() {
             </p>
           </div>
           
-          <div>
+          <div className="p-4 rounded-lg bg-white dark:bg-gray-900/50">
             <h3 className="mb-2 text-xl font-semibold text-logo-800 dark:text-white">Do you buy antiques?</h3>
             <p className="text-logo-700 dark:text-gray-200">
               We may be interested in purchasing quality antiques and collectibles that fit our inventory. 
@@ -277,7 +277,7 @@ export default function ContactPage() {
             </p>
           </div>
           
-          <div>
+          <div className="p-4 rounded-lg bg-white dark:bg-gray-900/50">
             <h3 className="mb-2 text-xl font-semibold text-logo-800 dark:text-white">Do you offer appraisals?</h3>
             <p className="text-logo-700 dark:text-gray-200">
               Yes, we offer professional appraisals on select items. Our experienced vendors can provide 
@@ -286,7 +286,7 @@ export default function ContactPage() {
             </p>
           </div>
           
-          <div>
+          <div className="p-4 rounded-lg bg-white dark:bg-gray-900/50">
             <h3 className="mb-2 text-xl font-semibold text-logo-800 dark:text-white">How can I become a vendor?</h3>
             <p className="text-logo-700 dark:text-gray-200">
               We welcome new vendors who specialize in quality antiques and collectibles. Please contact us directly 
