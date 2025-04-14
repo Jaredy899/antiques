@@ -46,25 +46,9 @@ export default function HoursLocationPage() {
         
         {/* Location Section */}
         <section className="rounded-lg bg-white dark:bg-gray-900 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white">Our Locations</h2>
+          <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white">Our Location</h2>
           
-          {/* Main Location */}
           <div className="mb-8">
-            <h3 className="mb-4 text-xl font-semibold text-logo-800">Original Location</h3>
-            <div className="mb-4">
-              <h4 className="mb-2 font-medium text-logo-800 dark:text-white">Address:</h4>
-              <address className="text-logo-700 dark:text-gray-300 not-italic">
-                <AddressLink address="961 West Main Street, Abingdon, VA 24210">
-                  961 West Main Street<br />
-                  Abingdon, VA 24210
-                </AddressLink>
-              </address>
-            </div>
-          </div>
-
-          {/* Second Location */}
-          <div className="mb-6">
-            <h3 className="mb-4 text-xl font-semibold text-logo-800">New Location</h3>
             <div className="mb-4">
               <h4 className="mb-2 font-medium text-logo-800 dark:text-white">Address:</h4>
               <address className="text-logo-700 dark:text-gray-300 not-italic">
@@ -85,13 +69,13 @@ export default function HoursLocationPage() {
           <div className="mb-8">
             <h3 className="mb-2 font-medium text-logo-800 dark:text-white">Parking:</h3>
             <p className="text-logo-700 dark:text-gray-300">
-              Free parking is available at both locations and on surrounding streets.
+              Free parking is available at our location and on surrounding streets.
             </p>
           </div>
           
           <div>
             <a 
-              href="https://maps.google.com/?q=961+West+Main+Street,+Abingdon,+VA+24210" 
+              href="https://maps.google.com/?q=227+West+Main+Street,+Abingdon,+VA+24210" 
               target="_blank" 
               rel="noopener noreferrer"
               className="rounded-md bg-logo-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-logo-700"
@@ -104,39 +88,17 @@ export default function HoursLocationPage() {
       
       {/* Map Section */}
       <section className="mt-12 rounded-lg bg-white dark:bg-gray-900 p-2 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-        <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white text-center">Location Maps</h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* Main Location Map */}
-          <div>
-            <h3 className="mb-4 text-xl font-semibold text-logo-800 text-center">Original Location</h3>
-            <div className="aspect-video w-full">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.5396811182535!2d-82.0044369!3d36.5978767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885a8567c5696125%3A0xc4e3acdd8c366a57!2s961%20W%20Main%20St%2C%20Abingdon%2C%20VA%2024210!5e0!3m2!1sen!2sus!4v1709951280359!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-
-          {/* Second Location Map */}
-          <div>
-            <h3 className="mb-4 text-xl font-semibold text-logo-800 text-center">New Location</h3>
-            <div className="aspect-video w-full">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.5396811182535!2d-81.9774369!3d36.7098767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885a8567c5696125%3A0xc4e3acdd8c366a57!2s227%20W%20Main%20St%2C%20Abingdon%2C%20VA%2024210!5e0!3m2!1sen!2sus!4v1709951280359!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
+        <h2 className="mb-6 text-2xl font-bold text-logo-800 dark:text-white text-center">Location Map</h2>
+        <div className="aspect-video w-full">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.5396811182535!2d-81.9774369!3d36.7098767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885a8567c5696125%3A0xc4e3acdd8c366a57!2s227%20W%20Main%20St%2C%20Abingdon%2C%20VA%2024210!5e0!3m2!1sen!2sus!4v1709951280359!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
     </div>
