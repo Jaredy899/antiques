@@ -5,6 +5,7 @@ import Link from "next/link";
 import AddressLink from "~/components/AddressLink";
 import OptimizedImage from "~/components/OptimizedImage";
 import ImageGallery from "~/components/ImageGallery";
+import Image from "next/image";
 
 export default function HomePage() {
   // Hardcoded image URLs
@@ -29,7 +30,7 @@ export default function HomePage() {
           src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFs7JnlQPMWntGHVqNQ4dFc7j52XlJrsP8Obg0x"
           alt="Abingdon Antiques and More Store Front"
           fill
-          className="object-cover object-left"
+          className="object-cover object-right"
           priority
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
