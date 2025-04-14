@@ -12,7 +12,7 @@ const LogoHeader = () => {
       {!imageError ? (
         <div className="bg-white dark:bg-gray-900 rounded-lg shadow-logo dark:shadow-gray-800 border border-logo-100 dark:border-gray-700 transition-colors duration-200">
           <Image
-            src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsAtOxKzb1pPWKB2MoR9DLV5lmCjvsJGYxX3nw"
+            src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFssgg9HORiwGqRQXjaOTYzH816lIkchyoC9txN"
             alt="Abingdon Antiques and More"
             width={240}
             height={70}

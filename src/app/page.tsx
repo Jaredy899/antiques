@@ -25,7 +25,7 @@ export default function HomePage() {
       <section className="relative h-[70vh] min-h-[500px] w-full mb-16">
         <div className="absolute inset-0 bg-black/40 z-10" />
         <OptimizedImage
-          src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFs7JnlQPMWntGHVqNQ4dFc7j52XlJrsP8Obg0x"
+          src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsr4yxADfxyDUaIJcwEtMh2GFSkA5vgYbPZ3R0"
           alt="Abingdon Antiques and More Store Front"
           fill
           className="object-cover object-right"

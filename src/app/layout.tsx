@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: "Abingdon Antiques",
   description: "Abingdon Antiques and More Vendor Mall - Quality antiques and collectibles",
   icons: [
-    { rel: "icon", url: "/images/favicon.png" },
+    { rel: "icon", url: "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFs9KPUXtG8Hgw3jA5IqYdvuJ9CRS7lKfZzEa1L" },
   ],
 };
 
