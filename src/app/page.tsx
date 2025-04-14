@@ -5,7 +5,6 @@ import Link from "next/link";
 import AddressLink from "~/components/AddressLink";
 import OptimizedImage from "~/components/OptimizedImage";
 import ImageGallery from "~/components/ImageGallery";
-import Image from "next/image";
 
 export default function HomePage() {
   // Hardcoded image URLs
