@@ -19,14 +19,14 @@ const Header = () => {
         <ThemeToggle />
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 py-6">
+      <div className="mx-auto max-w-6xl px-4 py-3 md:py-4">
         {/* Logo Header */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mb-3 md:mb-4">
           <LogoHeader />
         </div>
 
         {/* Navigation */}
-        <nav className="border-t border-b border-logo-200 dark:border-gray-700 py-4">
+        <nav className="border-t border-b border-logo-200 dark:border-gray-700 py-2 md:py-3">
           {/* Mobile Menu Button */}
           <div className="flex justify-center md:hidden">
             <button 
