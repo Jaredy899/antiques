@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import AddressLink from "./AddressLink";
 
@@ -5,12 +7,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 py-8 text-logo-700 dark:text-gray-300 transition-colors duration-200">
+    <footer className="border-t border-logo-200 dark:border-logo-dark-200 bg-logo-50 dark:bg-logo-dark-100 py-8 text-logo-700 dark:text-gray-100 transition-colors duration-200">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Contact Info */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold text-logo-800 dark:text-white">Contact Us</h3>
+            <h3 className="mb-3 text-lg font-semibold text-logo-800 dark:text-gray-100">Contact Us</h3>
             <p className="mb-2">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
             <p className="mb-2">Email: <a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
             <div className="mb-4">
@@ -24,13 +26,13 @@ const Footer = () => {
               </div>
             </div>
             <div className="mt-4">
-              <h4 className="mb-2 font-medium text-logo-800 dark:text-white">Follow Us:</h4>
+              <h4 className="mb-2 font-medium text-logo-800 dark:text-gray-100">Follow Us:</h4>
               <div className="flex space-x-4">
                 <a 
                   href="https://www.facebook.com/profile.php?id=61551934216826" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
+                  className="text-logo-600 dark:text-gray-100 hover:text-logo-800 dark:hover:text-white transition-colors"
                   aria-label="Facebook"
                 >
                   <svg
@@ -47,7 +49,7 @@ const Footer = () => {
                   href="https://www.instagram.com/abingdonantiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
+                  className="text-logo-600 dark:text-gray-100 hover:text-logo-800 dark:hover:text-white transition-colors"
                   aria-label="Instagram"
                 >
                   <svg
@@ -64,7 +66,7 @@ const Footer = () => {
                   href="http://www.youtube.com/@AbingdonAntiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
+                  className="text-logo-600 dark:text-gray-100 hover:text-logo-800 dark:hover:text-white transition-colors"
                   aria-label="YouTube"
                 >
                   <svg
@@ -81,7 +83,7 @@ const Footer = () => {
                   href="https://www.tiktok.com/@abingdonantiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
+                  className="text-logo-600 dark:text-gray-100 hover:text-logo-800 dark:hover:text-white transition-colors"
                   aria-label="TikTok"
                 >
                   <svg
@@ -100,7 +102,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold text-logo-800 dark:text-white">Quick Links</h3>
+            <h3 className="mb-3 text-lg font-semibold text-logo-800 dark:text-gray-100">Quick Links</h3>
             <div className="space-y-2">
               <Link href="/" className="block hover:underline">
                 Home
@@ -116,14 +118,14 @@ const Footer = () => {
 
           {/* Hours */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold text-logo-800 dark:text-white">Hours</h3>
+            <h3 className="mb-3 text-lg font-semibold text-logo-800 dark:text-gray-100">Hours</h3>
             <p className="mb-2">Monday - Saturday: 10:00 AM - 6:00 PM</p>
             <p className="mb-2">Sunday: 1:00 PM - 4:00 PM</p>
             <p className="italic">Closed on major holidays</p>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-logo-200 dark:border-gray-700 pt-6 text-center">
+        <div className="mt-8 border-t border-logo-200 dark:border-logo-dark-200 pt-6 text-center">
           <p>&copy; {currentYear} Abingdon Antiques and More. All rights reserved.</p>
         </div>
       </div>

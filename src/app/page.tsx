@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Link from "next/link";
 import AddressLink from "~/components/AddressLink";
 import OptimizedImage from "~/components/OptimizedImage";
@@ -41,9 +40,9 @@ export default function HomePage() {
       </section>
 
       {/* Social Media Section */}
-      <section className="mb-16 rounded-lg bg-logo-100 dark:bg-gray-800 p-8 text-center shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-        <h2 className="mb-4 text-2xl font-bold text-logo-800 dark:text-white">Stay Connected!</h2>
-        <p className="mb-6 text-logo-700 dark:text-gray-200">
+      <section className="mb-16 rounded-lg bg-logo-100 dark:bg-logo-dark-100 p-8 text-center shadow-logo dark:shadow-dark-logo transition-colors duration-200">
+        <h2 className="mb-4 text-2xl font-bold text-logo-800 dark:text-gray-100">Stay Connected!</h2>
+        <p className="mb-6 text-logo-700 dark:text-gray-100">
           Follow us on social media for the latest updates, new arrivals, pictures, and videos!
         </p>
         <div className="flex flex-wrap justify-center gap-4">
@@ -73,7 +72,7 @@ export default function HomePage() {
       </section>
 
       {/* New Location Announcement */}
-      <section className="mb-16 rounded-lg bg-logo-200 dark:bg-gray-800 p-8 shadow-logo dark:shadow-gray-800 border-2 border-logo-600 dark:border-gray-600 transition-colors duration-200">
+      <section className="mb-16 rounded-lg bg-logo-200 dark:bg-logo-dark-100 p-8 shadow-logo dark:shadow-dark-logo border-2 border-logo-600 dark:border-logo-dark-300 transition-colors duration-200">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
             <h2 className="mb-4 text-3xl font-bold text-logo-800 dark:text-white font-serif">
@@ -89,7 +88,7 @@ export default function HomePage() {
               We have successfully completed our move to our new location! Come visit us at our beautiful new space in the heart of downtown Abingdon.
             </p>
           </div>
-          <div className="rounded-lg bg-white dark:bg-gray-700 p-2 shadow-md">
+          <div className="rounded-lg bg-white dark:bg-logo-dark-50 p-2 shadow-md">
             <OptimizedImage 
               src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsWShw4AnAoZYFIrpQJyB8wcDh0eKmCV6iTnMg" 
               alt="Our new location at 227 W Main St" 
@@ -102,34 +101,34 @@ export default function HomePage() {
       </section>
 
       {/* About Us */}
-      <section className="mb-16 rounded-lg bg-white dark:bg-gray-800 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-        <h2 className="mb-6 text-center text-3xl font-bold text-logo-800 dark:text-white font-serif">About Abingdon Antiques and More</h2>
+      <section className="mb-16 rounded-lg bg-white dark:bg-logo-dark-100 p-8 shadow-logo dark:shadow-dark-logo transition-colors duration-200">
+        <h2 className="mb-6 text-center text-3xl font-bold text-logo-800 dark:text-gray-100 font-serif">About Abingdon Antiques and More</h2>
         <div className="grid gap-8 md:grid-cols-2">
           <div>
-            <p className="mb-4 text-logo-700 dark:text-gray-200 text-center">
+            <p className="mb-4 text-logo-700 dark:text-gray-100 text-center">
               Abingdon Antiques and More Vendor Mall brings together a community of experienced dealers, 
               each bringing their unique expertise and carefully curated inventory.
             </p>
-            <p className="mb-4 text-logo-700 dark:text-gray-200 text-center">
+            <p className="mb-4 text-logo-700 dark:text-gray-100 text-center">
               Whether you&apos;re looking for fine furniture, vintage clothing, rare collectibles, or unique home decor, 
               you&apos;ll find something special at Abingdon Antiques and More.
             </p>
-            <p className="text-logo-700 dark:text-gray-200 text-center">
+            <p className="text-logo-700 dark:text-gray-100 text-center">
               Visit us today and discover why we&apos;re becoming the region&apos;s premier destination for antiques and collectibles.
             </p>
           </div>
           <div className="flex flex-col gap-4">
-            <div className="rounded bg-logo-50 dark:bg-gray-800 p-4 shadow-sm transition-colors duration-200">
-              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white font-serif">Quality Selection</h3>
-              <p className="text-logo-700 dark:text-gray-200">Curated antiques and collectibles from reputable vendors.</p>
+            <div className="rounded bg-logo-50 dark:bg-logo-dark-50 p-4 shadow-sm transition-colors duration-200">
+              <h3 className="mb-2 font-semibold text-logo-800 dark:text-gray-100 font-serif">Quality Selection</h3>
+              <p className="text-logo-700 dark:text-gray-100">Curated antiques and collectibles from reputable vendors.</p>
             </div>
-            <div className="rounded bg-logo-50 dark:bg-gray-800 p-4 shadow-sm transition-colors duration-200">
-              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white font-serif">Expert Knowledge</h3>
-              <p className="text-logo-700 dark:text-gray-200">Our vendors bring decades of expertise in their specialties.</p>
+            <div className="rounded bg-logo-50 dark:bg-logo-dark-50 p-4 shadow-sm transition-colors duration-200">
+              <h3 className="mb-2 font-semibold text-logo-800 dark:text-gray-100 font-serif">Expert Knowledge</h3>
+              <p className="text-logo-700 dark:text-gray-100">Our vendors bring decades of expertise in their specialties.</p>
             </div>
-            <div className="rounded bg-logo-50 dark:bg-gray-800 p-4 shadow-sm transition-colors duration-200">
-              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white font-serif">New Inventory Weekly</h3>
-              <p className="text-logo-700 dark:text-gray-200">Fresh items added regularly for returning customers.</p>
+            <div className="rounded bg-logo-50 dark:bg-logo-dark-50 p-4 shadow-sm transition-colors duration-200">
+              <h3 className="mb-2 font-semibold text-logo-800 dark:text-gray-100 font-serif">New Inventory Weekly</h3>
+              <p className="text-logo-700 dark:text-gray-100">Fresh items added regularly for returning customers.</p>
             </div>
           </div>
         </div>
@@ -148,11 +147,11 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action */}
-      <section className="rounded-lg bg-logo-100 dark:bg-gray-800 p-8 text-center shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-        <h2 className="mb-4 text-3xl font-bold text-logo-800 dark:text-white">
+      <section className="rounded-lg bg-logo-100 dark:bg-logo-dark-100 p-8 text-center shadow-logo dark:shadow-dark-logo transition-colors duration-200">
+        <h2 className="mb-4 text-3xl font-bold text-logo-800 dark:text-gray-100">
           Ready to Discover Unique Treasures?
         </h2>
-        <p className="mb-6 text-lg text-logo-700 dark:text-gray-200">
+        <p className="mb-6 text-lg text-logo-700 dark:text-gray-100">
           Visit Abingdon Antiques and More today to find one-of-a-kind items with history and character.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
@@ -164,7 +163,7 @@ export default function HomePage() {
           </Link>
           <Link 
             href="/contact" 
-            className="rounded-md border border-logo-600 dark:border-gray-600 bg-transparent px-5 py-2.5 text-logo-700 dark:text-gray-200 shadow-sm transition-all hover:bg-logo-50 dark:hover:bg-gray-700 focus:ring-2 focus:ring-logo-300"
+            className="rounded-md border border-logo-600 dark:border-logo-dark-300 bg-transparent px-5 py-2.5 text-logo-700 dark:text-gray-100 shadow-sm transition-all hover:bg-logo-50 dark:hover:bg-logo-dark-50 focus:ring-2 focus:ring-logo-300"
           >
             Contact Us
           </Link>
