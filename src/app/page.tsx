@@ -23,7 +23,6 @@ export default function HomePage() {
     <div className="mx-auto max-w-6xl px-4 py-12">
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] w-full mb-16">
-        <div className="absolute inset-0 bg-black/40 z-10" />
         <OptimizedImage
           src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsr4yxADfxyDUaIJcwEtMh2GFSkA5vgYbPZ3R0"
           alt="Abingdon Antiques and More Store Front"
