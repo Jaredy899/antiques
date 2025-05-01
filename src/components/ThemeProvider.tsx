@@ -12,12 +12,12 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
+    // Check for saved theme preference or default to dark mode
     const savedTheme = localStorage.getItem('theme') as Theme;
-    const initialTheme = savedTheme || 'light';
+    const initialTheme = savedTheme || 'dark';
     
     setTheme(initialTheme);
     document.documentElement.classList.toggle('dark', initialTheme === 'dark');

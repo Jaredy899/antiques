@@ -3,16 +3,21 @@
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const LogoHeader = () => {
   const [imageError, setImageError] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   return (
-    <Link href="/" className="block w-[180px] md:w-[240px] cursor-pointer">
+    <Link href="/" className="block cursor-pointer">
       {!imageError ? (
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-logo dark:shadow-gray-800 border border-logo-100 dark:border-gray-700 transition-colors duration-200">
+        <div className={`transition-all duration-500 ease-in-out hover:scale-[1.02] hover:shadow-md ${
+          isHomePage ? 'w-[180px] md:w-[240px]' : 'w-[120px] md:w-[160px]'
+        }`}>
           <Image
-            src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFssgg9HORiwGqRQXjaOTYzH816lIkchyoC9txN"
+            src="/images/logo.jpg"
             alt="Abingdon Antiques and More"
             width={240}
             height={70}
@@ -22,10 +27,12 @@ const LogoHeader = () => {
           />
         </div>
       ) : (
-        <div className="flex items-center justify-center rounded border-2 border-dashed border-logo-300 dark:border-gray-600 bg-white dark:bg-gray-900 p-3 text-center transition-colors duration-200">
+        <div className={`flex items-center justify-center p-3 text-center transition-all duration-500 ease-in-out hover:scale-[1.02] hover:shadow-md ${
+          isHomePage ? 'w-[180px] md:w-[240px]' : 'w-[120px] md:w-[160px]'
+        }`}>
           <div>
-            <h1 className="text-lg font-bold text-logo-800 dark:text-white">Abingdon Antiques</h1>
-            <p className="text-sm text-logo-600 dark:text-gray-300">and More Vendor Mall</p>
+            <h1 className="text-lg font-bold text-gray-900 dark:text-white">Abingdon Antiques</h1>
+            <p className="text-sm text-gray-700 dark:text-gray-300">and More Vendor Mall</p>
           </div>
         </div>
       )}

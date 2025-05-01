@@ -6,13 +6,15 @@ type ImageGalleryProps = {
   title?: string;
   columns?: 1 | 2 | 3 | 4;
   aspectRatio?: 'square' | 'video' | 'auto';
+  titleClassName?: string;
 };
 
 export default function ImageGallery({ 
   images, 
   title, 
   columns = 3,
-  aspectRatio = 'square'
+  aspectRatio = 'square',
+  titleClassName = ''
 }: ImageGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -32,7 +34,7 @@ export default function ImageGallery({
   return (
     <section className="py-8">
       {title && (
-        <h2 className="text-3xl font-bold text-center mb-8">{title}</h2>
+        <h2 className={`text-3xl font-bold text-center mb-8 ${titleClassName}`}>{title}</h2>
       )}
       
       <div className={`grid ${gridCols[columns]} gap-6`}>

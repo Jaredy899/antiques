@@ -5,18 +5,26 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-logo-200 dark:border-gray-700 bg-logo-50 dark:bg-gray-800 py-8 text-logo-700 dark:text-gray-300 transition-colors duration-200">
+    <footer className="border-t border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 py-8 text-gray-700 dark:text-gray-300 transition-colors duration-200">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 text-center lg:text-left">
           {/* Contact Info */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold text-logo-800 dark:text-white">Contact Us</h3>
-            <p className="mb-2">Phone: <a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
-            <p className="mb-2">Email: <a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
-            <div className="mb-4">
-              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white">Address:</h3>
-              <div className="space-y-2 text-logo-700 dark:text-gray-300">
-                <div>
+            <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Contact Us</h3>
+            <div className="space-y-2">
+              <div>
+                <p className="font-medium text-gray-900 dark:text-white">Phone:</p>
+                <p><a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
+              </div>
+              
+              <div>
+                <p className="font-medium text-gray-900 dark:text-white">Email:</p>
+                <p className="break-all"><a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
+              </div>
+              
+              <div>
+                <p className="font-medium text-gray-900 dark:text-white">Address:</p>
+                <div className="text-gray-700 dark:text-gray-300">
                   <AddressLink address="227 West Main Street, Abingdon, VA 24210">
                     227 West Main Street, Abingdon, VA 24210
                   </AddressLink>
@@ -24,13 +32,13 @@ const Footer = () => {
               </div>
             </div>
             <div className="mt-4">
-              <h4 className="mb-2 font-medium text-logo-800 dark:text-white">Follow Us:</h4>
-              <div className="flex space-x-4">
+              <h4 className="mb-2 font-medium text-gray-900 dark:text-white">Follow Us:</h4>
+              <div className="flex justify-center lg:justify-start space-x-4">
                 <a 
                   href="https://www.facebook.com/profile.php?id=61551934216826" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
+                  className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                   aria-label="Facebook"
                 >
                   <svg
@@ -47,7 +55,7 @@ const Footer = () => {
                   href="https://www.instagram.com/abingdonantiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
+                  className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                   aria-label="Instagram"
                 >
                   <svg
@@ -64,7 +72,7 @@ const Footer = () => {
                   href="http://www.youtube.com/@AbingdonAntiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
+                  className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                   aria-label="YouTube"
                 >
                   <svg
@@ -81,7 +89,7 @@ const Footer = () => {
                   href="https://www.tiktok.com/@abingdonantiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-logo-600 dark:text-gray-400 hover:text-logo-800 dark:hover:text-white transition-colors"
+                  className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                   aria-label="TikTok"
                 >
                   <svg
@@ -100,30 +108,29 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold text-logo-800 dark:text-white">Quick Links</h3>
+            <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Quick Links</h3>
             <div className="space-y-2">
               <Link href="/" className="block hover:underline">
                 Home
               </Link>
-              <Link href="/hours-location" className="block hover:underline">
-                Hours & Location
-              </Link>
-              <Link href="/contact" className="block hover:underline">
-                Contact
+              <Link href="/information" className="block hover:underline">
+                Information
               </Link>
             </div>
           </div>
 
           {/* Hours */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold text-logo-800 dark:text-white">Hours</h3>
-            <p className="mb-2">Monday - Saturday: 10:00 AM - 6:00 PM</p>
-            <p className="mb-2">Sunday: 1:00 PM - 4:00 PM</p>
-            <p className="italic">Closed on major holidays</p>
+            <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Store Hours</h3>
+            <div className="text-base text-gray-700 dark:text-gray-300 space-y-3">
+              <p>Tuesday - Saturday: 10:00 AM - 6:00 PM</p>
+              <p>Sunday & Monday: Typically Closed</p>
+              <p className="text-sm italic">* May be open on special occasions or during peak seasons</p>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-logo-200 dark:border-gray-700 pt-6 text-center">
+        <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6 text-center">
           <p>&copy; {currentYear} Abingdon Antiques and More. All rights reserved.</p>
         </div>
       </div>

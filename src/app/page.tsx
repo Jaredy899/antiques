@@ -24,24 +24,18 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] w-full mb-16">
         <OptimizedImage
-          src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsr4yxADfxyDUaIJcwEtMh2GFSkA5vgYbPZ3R0"
+          src="/images/hero.jpg"
           alt="Abingdon Antiques and More Store Front"
           fill
           className="object-cover object-right"
           priority
         />
-        <div className="absolute inset-0 z-20 flex items-center justify-center">
-          <div className="text-center text-white">
-            {/* <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-4 tracking-wide">Abingdon Antiques and More</h1>
-            <p className="font-playfair text-xl md:text-2xl italic tracking-wide">Discover Unique Treasures</p> */}
-          </div>
-        </div>
       </section>
 
       {/* Social Media Section */}
-      <section className="mb-16 rounded-lg bg-logo-100 dark:bg-gray-800 p-8 text-center shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-        <h2 className="mb-4 text-2xl font-bold text-logo-800 dark:text-white">Stay Connected!</h2>
-        <p className="mb-6 text-logo-700 dark:text-gray-200">
+      <section className="mb-16 rounded-lg bg-gray-100 dark:bg-gray-800 p-8 text-center transition-colors duration-200">
+        <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">Stay Connected!</h2>
+        <p className="mb-6 text-gray-700 dark:text-gray-200">
           Follow us on social media for the latest updates, new arrivals, pictures, and videos!
         </p>
         <div className="flex flex-wrap justify-center gap-4">
@@ -71,19 +65,19 @@ export default function HomePage() {
       </section>
 
       {/* New Location Announcement */}
-      <section className="mb-16 rounded-lg bg-logo-200 dark:bg-gray-800 p-8 shadow-logo dark:shadow-gray-800 border-2 border-logo-600 dark:border-gray-600 transition-colors duration-200">
+      <section className="mb-16 rounded-lg bg-gray-100 dark:bg-gray-800 p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-200">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h2 className="mb-4 text-3xl font-bold text-logo-800 dark:text-white font-serif">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white font-serif">
               Our New Home!
             </h2>
-            <p className="mb-6 text-lg text-logo-700 dark:text-gray-200">
+            <p className="mb-6 text-lg text-gray-700 dark:text-gray-200">
               <span className="font-semibold">We are now exclusively located at:</span><br />
               <AddressLink address="227 W Main St, Abingdon, VA 24210">
                 227 W Main St, Abingdon, VA 24210
               </AddressLink>
             </p>
-            <p className="text-logo-700 dark:text-gray-200">
+            <p className="text-gray-700 dark:text-gray-200">
               We have successfully completed our move to our new location! Come visit us at our beautiful new space in the heart of downtown Abingdon.
             </p>
           </div>
@@ -100,34 +94,28 @@ export default function HomePage() {
       </section>
 
       {/* About Us */}
-      <section className="mb-16 rounded-lg bg-white dark:bg-gray-800 p-8 shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-        <h2 className="mb-6 text-center text-3xl font-bold text-logo-800 dark:text-white font-serif">About Abingdon Antiques and More</h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          <div>
-            <p className="mb-4 text-logo-700 dark:text-gray-200 text-center">
-              Abingdon Antiques and More Vendor Mall brings together a community of experienced dealers, 
-              each bringing their unique expertise and carefully curated inventory.
-            </p>
-            <p className="mb-4 text-logo-700 dark:text-gray-200 text-center">
-              Whether you&apos;re looking for fine furniture, vintage clothing, rare collectibles, or unique home decor, 
-              you&apos;ll find something special at Abingdon Antiques and More.
-            </p>
-            <p className="text-logo-700 dark:text-gray-200 text-center">
-              Visit us today and discover why we&apos;re becoming the region&apos;s premier destination for antiques and collectibles.
-            </p>
-          </div>
-          <div className="flex flex-col gap-4">
-            <div className="rounded bg-logo-50 dark:bg-gray-800 p-4 shadow-sm transition-colors duration-200">
-              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white font-serif">Quality Selection</h3>
-              <p className="text-logo-700 dark:text-gray-200">Curated antiques and collectibles from reputable vendors.</p>
-            </div>
-            <div className="rounded bg-logo-50 dark:bg-gray-800 p-4 shadow-sm transition-colors duration-200">
-              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white font-serif">Expert Knowledge</h3>
-              <p className="text-logo-700 dark:text-gray-200">Our vendors bring decades of expertise in their specialties.</p>
-            </div>
-            <div className="rounded bg-logo-50 dark:bg-gray-800 p-4 shadow-sm transition-colors duration-200">
-              <h3 className="mb-2 font-semibold text-logo-800 dark:text-white font-serif">New Inventory Weekly</h3>
-              <p className="text-logo-700 dark:text-gray-200">Fresh items added regularly for returning customers.</p>
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="rounded-xl bg-gray-100 dark:bg-gray-800 p-8 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-serif font-bold mb-6 text-gray-900 dark:text-white">Welcome to Abingdon Antiques and More</h2>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  Abingdon Antiques and More Vendor Mall brings together a community of experienced dealers, each bringing their unique expertise and carefully curated inventory.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  Whether you're looking for fine furniture, rare collectibles, or unique home decor, you'll find something special at Abingdon Antiques and More.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-8">
+                  Visit us today and discover why we're becoming the region's premier destination for antiques and collectibles.
+                </p>
+                <Link 
+                  href="/information" 
+                  className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md transition-colors duration-200"
+                >
+                  Visit Our Store
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -141,31 +129,8 @@ export default function HomePage() {
             title="Featured Items" 
             columns={3} 
             aspectRatio="square" 
+            titleClassName="text-gray-900 dark:text-white"
           />
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="rounded-lg bg-logo-100 dark:bg-gray-800 p-8 text-center shadow-logo dark:shadow-gray-800 transition-colors duration-200">
-        <h2 className="mb-4 text-3xl font-bold text-logo-800 dark:text-white">
-          Ready to Discover Unique Treasures?
-        </h2>
-        <p className="mb-6 text-lg text-logo-700 dark:text-gray-200">
-          Visit Abingdon Antiques and More today to find one-of-a-kind items with history and character.
-        </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
-            href="/hours-location" 
-            className="rounded-md bg-logo-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-logo-700 focus:ring-2 focus:ring-logo-300"
-          >
-            Get Directions
-          </Link>
-          <Link 
-            href="/contact" 
-            className="rounded-md border border-logo-600 dark:border-gray-600 bg-transparent px-5 py-2.5 text-logo-700 dark:text-gray-200 shadow-sm transition-all hover:bg-logo-50 dark:hover:bg-gray-700 focus:ring-2 focus:ring-logo-300"
-          >
-            Contact Us
-          </Link>
         </div>
       </section>
     </div>
