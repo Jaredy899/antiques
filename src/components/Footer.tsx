@@ -123,9 +123,9 @@ const Footer = () => {
           <div>
             <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Store Hours</h3>
             <div className="text-base text-gray-700 dark:text-gray-300 space-y-3">
-              <p>Tuesday - Saturday: 10:00 AM - 6:00 PM</p>
-              <p>Sunday & Monday: Typically Closed</p>
-              <p className="text-sm italic">* May be open on special occasions or during peak seasons</p>
+              <p>Monday - Saturday: 10:00 AM - 6:00 PM</p>
+              <p>Sunday: 1:00 PM - 4:00 PM</p>
+              {/* <p className="text-sm italic">* May be open on special occasions or during peak seasons</p> */}
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-baskerville)", ...fontFamily.sans],
+        sans: ["var(--font-montserrat)", ...fontFamily.sans],
         serif: ["var(--font-playfair)", ...fontFamily.serif],
         display: ["var(--font-playfair)", ...fontFamily.serif],
       },

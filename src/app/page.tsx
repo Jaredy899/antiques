@@ -16,7 +16,6 @@ export default function HomePage() {
     "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFssWQENxRiwGqRQXjaOTYzH816lIkchyoC9txN",
     "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsED72c492bga4hAVdszcfGZt3vDSkFJe8rKwR",
     "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsd1SLKG2VFBmf9HhQVLJpzkqGNjtM6ZlxcgPW",
-    "https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFs9bWwcqG8Hgw3jA5IqYdvuJ9CRS7lKfZzEa1L",
   ];
 
   return (
@@ -24,12 +23,41 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] w-full mb-16">
         <OptimizedImage
-          src="/images/hero.jpg"
+          src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsprImupZrIA5bjUedfSC906PxVE4OY2tgy31o"
           alt="Abingdon Antiques and More Store Front"
           fill
           className="object-cover object-right"
           priority
         />
+      </section>
+
+    {/* New Location Announcement */}
+      <section className="mb-16 rounded-lg bg-gray-100 dark:bg-gray-800 p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-200">
+        <div className="grid items-center gap-8 md:grid-cols-2">
+          <div>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white font-serif">
+              Our New Home!
+            </h2>
+            <p className="mb-6 text-lg text-gray-700 dark:text-gray-200">
+              <span className="font-semibold">We are now exclusively located at:</span><br />
+              <AddressLink address="227 W Main St, Abingdon, VA 24210">
+                227 W Main St, Abingdon, VA 24210
+              </AddressLink>
+            </p>
+            <p className="text-gray-700 dark:text-gray-200">
+              We have successfully completed our move to our new location! Come visit us at our beautiful new space in the heart of downtown Abingdon.
+            </p>
+          </div>
+          <div className="rounded-lg bg-white dark:bg-gray-700 p-2 shadow-md">
+            <OptimizedImage 
+              src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsWShw4AnAoZYFIrpQJyB8wcDh0eKmCV6iTnMg" 
+              alt="Our new location at 227 W Main St" 
+              className="rounded object-cover"
+              width={500}
+              height={300}
+            />
+          </div>
+        </div>
       </section>
 
       {/* Social Media Section */}
@@ -64,35 +92,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Location Announcement */}
-      <section className="mb-16 rounded-lg bg-gray-100 dark:bg-gray-800 p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-200">
-        <div className="grid items-center gap-8 md:grid-cols-2">
-          <div>
-            <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white font-serif">
-              Our New Home!
-            </h2>
-            <p className="mb-6 text-lg text-gray-700 dark:text-gray-200">
-              <span className="font-semibold">We are now exclusively located at:</span><br />
-              <AddressLink address="227 W Main St, Abingdon, VA 24210">
-                227 W Main St, Abingdon, VA 24210
-              </AddressLink>
-            </p>
-            <p className="text-gray-700 dark:text-gray-200">
-              We have successfully completed our move to our new location! Come visit us at our beautiful new space in the heart of downtown Abingdon.
-            </p>
-          </div>
-          <div className="rounded-lg bg-white dark:bg-gray-700 p-2 shadow-md">
-            <OptimizedImage 
-              src="https://xfcpn2nyfb.ufs.sh/f/LKapUqCN3UFsWShw4AnAoZYFIrpQJyB8wcDh0eKmCV6iTnMg" 
-              alt="Our new location at 227 W Main St" 
-              className="rounded object-cover"
-              width={500}
-              height={300}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* About Us */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -111,7 +110,7 @@ export default function HomePage() {
                 </p>
                 <Link 
                   href="/information" 
-                  className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md transition-colors duration-200"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md transition-colors duration-200"
                 >
                   Visit Our Store
                 </Link>
@@ -127,7 +126,7 @@ export default function HomePage() {
           <ImageGallery 
             images={galleryImages} 
             title="Featured Items" 
-            columns={3} 
+            columns={2} 
             aspectRatio="square" 
             titleClassName="text-gray-900 dark:text-white"
           />

@@ -14,26 +14,26 @@ export default function InformationPage() {
             <h2 className="text-2xl font-serif font-bold mb-6 text-gray-900 dark:text-white">Store Hours</h2>
             <div className="space-y-4">
               <div>
-                <p className="font-medium text-gray-900 dark:text-white">Tuesday - Saturday</p>
+                <p className="font-medium text-gray-900 dark:text-white">Monday - Saturday</p>
                 <p className="text-gray-600 dark:text-gray-300">10:00 AM - 6:00 PM</p>
               </div>
               <div>
-                <p className="font-medium text-gray-900 dark:text-white">Sunday & Monday</p>
-                <p className="text-gray-600 dark:text-gray-300">Typically Closed</p>
+                <p className="font-medium text-gray-900 dark:text-white">Sunday</p>
+                <p className="text-gray-600 dark:text-gray-300">1:00 PM - 4:00 PM</p>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">* May be open on special occasions or during peak seasons</p>
+              {/* <p className="text-gray-600 dark:text-gray-300 text-sm">* May be open on special occasions or during peak seasons</p> */}
             </div>
             
             <h3 className="text-xl font-serif font-bold mt-8 mb-4 text-gray-900 dark:text-white">Holiday Schedule</h3>
             <div className="space-y-4">
               <p className="text-gray-600 dark:text-gray-300">We are closed on the following holidays:</p>
               <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-300">
-                <li>New Year&apos;s Day</li>
-                <li>Easter Sunday</li>
-                <li>Independence Day</li>
-                <li>Thanksgiving Day</li>
-                <li>Christmas Eve</li>
-                <li>Christmas Day</li>
+              <li>🎆 New Year&apos;s Day</li>
+              <li>🐰 Easter Sunday</li>
+              <li>🎇 Independence Day</li>
+              <li>🦃 Thanksgiving Day</li> 
+              <li>🎄 Christmas Eve</li>
+              <li>🎅 Christmas Day</li>
               </ul>
               <p className="text-gray-600 dark:text-gray-300 italic">We may have reduced hours on days adjacent to holidays. Please call ahead to confirm.</p>
             </div>
