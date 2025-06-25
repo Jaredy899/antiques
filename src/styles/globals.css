@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global link styles */
+@layer base {
+  a {
+    @apply text-blue-600 dark:text-blue-400 underline transition-colors duration-200;
+  }
+  
+  a:hover {
+    @apply text-blue-800 dark:text-blue-300;
+  }
+  
+  /* Override for specific link types that shouldn't have the default styling */
+  a[href^="tel:"],
+  a[href^="mailto:"] {
+    @apply text-blue-600 dark:text-blue-400 underline transition-colors duration-200;
+  }
+  
+  a[href^="tel:"]:hover,
+  a[href^="mailto:"]:hover {
+    @apply text-blue-800 dark:text-blue-300;
+  }
+}
+
+/* Utility class to remove underline from specific links */
+@layer utilities {
+  .no-underline {
+    text-decoration: none !important;
+  }
+}
+
+/* Override for button-style links */
+@layer components {
+  a.no-underline {
+    @apply text-white;
+  }
+  
+  a.no-underline:hover {
+    @apply text-white;
+  }
+}

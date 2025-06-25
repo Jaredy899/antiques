@@ -1,27 +1,26 @@
 "use client";
 
-import { openMaps } from "~/utils/mapUtils";
-
 interface AddressLinkProps {
-  address: string;
-  children: React.ReactNode;
   className?: string;
+  children: React.ReactNode;
 }
 
 const AddressLink: React.FC<AddressLinkProps> = ({ 
-  address, 
   children,
-  className = "hover:underline text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" 
+  className = "" 
 }) => {
-  const handleAddressClick = (e: React.MouseEvent) => {
+  const address = "227 W Main St, Abingdon, VA 24210";
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
+  const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    openMaps(address);
+    window.open(mapsUrl, '_blank');
   };
 
   return (
     <a 
-      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
-      onClick={handleAddressClick}
+      href={mapsUrl}
+      onClick={handleClick}
       className={className}
     >
       {children}

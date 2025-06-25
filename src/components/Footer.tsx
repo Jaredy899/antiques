@@ -14,18 +14,18 @@ const Footer = () => {
             <div className="space-y-2">
               <div>
                 <p className="font-medium text-gray-900 dark:text-white">Phone:</p>
-                <p><a href="tel:+12764771515" className="hover:underline">276-477-1515</a></p>
+                <p><a href="tel:+12764771515">276-477-1515</a></p>
               </div>
               
               <div>
                 <p className="font-medium text-gray-900 dark:text-white">Email:</p>
-                <p className="break-all"><a href="mailto:abingdonantiquesandmore@gmail.com" className="hover:underline">abingdonantiquesandmore@gmail.com</a></p>
+                <p className="break-all"><a href="mailto:abingdonantiquesandmore@gmail.com">abingdonantiquesandmore@gmail.com</a></p>
               </div>
               
               <div>
                 <p className="font-medium text-gray-900 dark:text-white">Address:</p>
                 <div className="text-gray-700 dark:text-gray-300">
-                  <AddressLink address="227 West Main Street, Abingdon, VA 24210">
+                  <AddressLink>
                     227 West Main Street, Abingdon, VA 24210
                   </AddressLink>
                 </div>
@@ -38,7 +38,7 @@ const Footer = () => {
                   href="https://www.facebook.com/profile.php?id=61551934216826" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="no-underline"
                   aria-label="Facebook"
                 >
                   <svg
@@ -55,7 +55,7 @@ const Footer = () => {
                   href="https://www.instagram.com/abingdonantiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="no-underline"
                   aria-label="Instagram"
                 >
                   <svg
@@ -72,7 +72,7 @@ const Footer = () => {
                   href="http://www.youtube.com/@AbingdonAntiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="no-underline"
                   aria-label="YouTube"
                 >
                   <svg
@@ -89,7 +89,7 @@ const Footer = () => {
                   href="https://www.tiktok.com/@abingdonantiques" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="no-underline"
                   aria-label="TikTok"
                 >
                   <svg
@@ -110,10 +110,10 @@ const Footer = () => {
           <div>
             <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Quick Links</h3>
             <div className="space-y-2">
-              <Link href="/" className="block hover:underline">
+              <Link href="/" className="block">
                 Home
               </Link>
-              <Link href="/information" className="block hover:underline">
+              <Link href="/information" className="block">
                 Information
               </Link>
             </div>

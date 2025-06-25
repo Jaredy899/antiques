@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-montserrat)", ...fontFamily.sans],
+        sans: ["var(--font-inter)", "Inter", "system-ui", ...fontFamily.sans],
         serif: ["var(--font-playfair)", ...fontFamily.serif],
         display: ["var(--font-playfair)", ...fontFamily.serif],
       },

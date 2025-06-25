@@ -28,6 +28,12 @@ const config = {
         port: '',
         pathname: '/f/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'lyiiw7a2jaaujwge.public.blob.vercel-storage.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
   // Allow cross-origin requests during development
